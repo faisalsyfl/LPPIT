@@ -3,8 +3,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <ol class="breadcrumb">
-                        <li><a href="#" title="Post">Home</a></li>
-                        <li class="active">Category Name</li>
+                        <li class="active">Berita</li>
                     </ol>                    
                 </div>
             </div>

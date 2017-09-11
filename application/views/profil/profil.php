@@ -5,10 +5,9 @@
         <div class="row">
             <div class="col-sm-12">
                 <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
                     <li><a href="#">Profil</a></li>
                     <li class="active">Tentang Kami</li>
-                </ol>                    
+                </ol>                 
             </div>
         </div>
     </div>
@@ -19,15 +18,10 @@
             <section class="page col-sm-9">
                 <h2 class="page-title">TENTANG KAMI</h2>
                 <div class="entry text-justify">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam congue lectus diam, sit amet cursus massa efficitur sed. Pellentesque efficitur dolor tellus, sit amet vestibulum leo facilisis ac. Nullam vitae fringilla neque. Aliquam erat nunc, vestibulum at suscipit quis, consequat nec lorem. Phasellus porttitor mollis fermentum. Nulla eu eros libero. Donec semper, urna a rhoncus rutrum, nulla neque dignissim neque, nec congue tortor enim id mauris. Nulla euismod dolor lacus, porttitor imperdiet elit ornare nec. In finibus non justo id viverra.</p>
+                    <p>Fakultas Pendidikan Matematika dan Ilmu Pengetahuan Alam (FPMIPA) merupakan unsur pelaksana akademik yang bertugas mengkoordinasikan pelaksanaan kegiatan akademik bidang MIPA dan pendidikan MIPA. FPMIPA merupakan satu dari tujuh fakultas di UPI, bertugas menyiapkan guru MIPA dan ilmuwan bidang MIPA dituntut untuk menghasilkan lulusan yang mempunyai daya saing tinggi dalam era globalisasi. FPMIPA didirikan pertama kali dengan nama Jurusan Ilmu Pasti Alam pada tahun 1954, Fakultas Keguruan Ilmu Eksakta (FKIE) pada tahun 1963, dan diubah menjadi FPMIPA pada tahun 1983.</p>
 
-                    <p>Nullam rhoncus lorem quis lobortis euismod. Aliquam ornare et sem ut commodo. Maecenas nec velit neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer ullamcorper blandit eros, tincidunt tincidunt lacus rutrum at. Duis convallis luctus velit, nec ultricies arcu imperdiet eu. Quisque laoreet enim et gravida commodo.</p>
-
-                    <p>Curabitur felis nibh, porttitor eu nibh cursus, suscipit placerat dui. Donec nec aliquet enim. Quisque aliquet placerat fringilla. Nulla sed hendrerit lacus. Quisque consectetur mattis turpis eu ullamcorper. Nunc vehicula, tellus ac laoreet cursus, massa felis mattis enim, vitae luctus nisi leo nec ante. Suspendisse potenti. Cras at orci euismod, scelerisque ligula in, porttitor dui.</p>
-
-                    <p>Curabitur euismod lobortis sapien. Maecenas magna ligula, vulputate in nulla ac, tincidunt suscipit erat. Sed ac tempor nisi. Suspendisse laoreet, odio et consequat varius, sem urna convallis leo, egestas malesuada elit erat id tellus. Suspendisse scelerisque in felis at pretium. Maecenas dictum quam posuere ex hendrerit tempus. Donec vehicula quis erat quis sollicitudin. Vestibulum ultrices vitae arcu quis dignissim. Donec sagittis tincidunt arcu id pellentesque. Nullam eu risus tristique, mattis arcu laoreet, sagittis purus. Nulla facilisi. Nam ac justo quis elit pharetra scelerisque. Curabitur et dapibus ex. In quis pretium turpis. Aliquam tincidunt quam interdum, faucibus odio a, porttitor dui.</p>
-
-                    <p>Aenean non dapibus ante, sed dictum enim. Maecenas elementum auctor imperdiet. Nam eu mi placerat, dignissim libero condimentum, ornare est. Nunc euismod viverra sapien quis porttitor. Fusce eleifend quam quis nibh dictum scelerisque in vel lacus. Duis ac risus quis eros pretium lobortis. In malesuada est est.</p>                        
+                    <p>Setelah melalui proses evaluasi kelayakan oleh Komisi Disiplin Ilmu (KDI) MIPA, pada tahun 1998 dan 1999, Direkur Jenderal Pendidikan Tinggi merekomendasikan pembukaan program-program studi nonpendidikan di FPMIPA UPI melalui Surat Dirjen Dikti Nomor 910/D/T/98 tanggal 15 April 1998 dan SK Dirjen Dikti No. 227/DIKTI/Kep/1999 tanggal 11 Mei 1999. Rekomendasi perluasan mandat akademik ini didasarkan pada tuntutan masyarakat untuk memenuhi kebutuhan tenaga kerja berpendidikan tinggi dalam bidang MIPA dan kelayakan FPMIPA ditinjau dari kuantitas, kualifikasi, keahlian, dan kegiatan keilmuan dosen, kelengkapan sarana laboratorium, serta rancangan kurikulum.</p>
+                        
                 </div>
             </section>
             <aside class="sidebar col-sm-3">

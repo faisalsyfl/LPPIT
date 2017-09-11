@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LP2IT | Lembaga Pelatihan dan Penerapan Ilmu dan Teknologi</title>
-    <link rel="icon" href="img/upi.png">
+    <link rel="icon" href="<?php echo base_url(); ?>assets/img/upi.png">
     
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet">
     
@@ -34,7 +34,8 @@
                             <li><a href="https://www.facebook.com/Universitas.Pendidikan.Indonesia.UPI/" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="https://www.google.co.id/maps/place/Universitas+Pendidikan+Indonesia/@-6.8601379,107.5922075,17z/data=!3m1!4b1!4m5!3m4!1s0x2e68e6b9028d757f:0x8478e42d05e54464!8m2!3d-6.8601379!4d107.5944015" target="_blank"><i class="fa fa-map-marker"></i></a></li>
                             <li><a href="mailto:lp2it@upi.edu"><i class="fa fa-envelope-o"></i></a></li>
-                            <li><a href="tel:+62222013163"><i class="fa fa-phone"></i> +62222013163</a></li>
+                            <li><a href="tel:+62222013163"><i class="fa fa-phone"></i> +62222013163</a> | </li>
+                            <li><a href="<?php echo site_url(); ?>Admin/login"><i class="fa fa-sign-in"></i> Login</a></li>
                         </ul>                        
                     </div>
                 </div>

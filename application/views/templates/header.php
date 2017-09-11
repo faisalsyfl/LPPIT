@@ -53,9 +53,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-navbar-collapse">
                     <ul class="nav navbar-nav main-navbar-nav">
-                        <li class="active"><a href="<?php echo base_url(); ?>" title="">BERANDA</a></li>
-                        <li><a href="<?php echo site_url(); ?>Profil" title="">PROFIL</a></li>
-                        <li><a href="<?php echo base_url(); ?>Home/berita" title="">BERITA</a></li>
+ <li <?php if(is_null($this->uri->segment(1))) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>" title="">BERANDA</a></li>
+                        <li <?php if($this->uri->segment(1) == "Profil") echo "class='active'"; ?>><a href="<?php echo site_url(); ?>Profil" title="">PROFIL</a></li>
+                        <li <?php if($this->uri->segment(1) == "Berita") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Berita" title="">BERITA</a></li>
                         <li class="dropdown">
                             <a href="#" title="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PELATIHAN <span class="caret"></span></a>
                             <ul class="dropdown-menu">

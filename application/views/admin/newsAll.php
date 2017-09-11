@@ -1,0 +1,71 @@
+  
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <section class="content-header">
+      <h1>
+        Berita
+        <small>Semua Berita</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-book"></i> Berita</a></li>
+        <li class="active">Semua Berita</li>
+      </ol>
+    </section>
+  <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+            <h3 class="box-title">Daftar Berita</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                <th>No.</th>
+                <th>Judul Berita</th>
+                <th>Tanggal</th>
+                <th>Kategori</th>
+                <th>Penulis</th>
+                <th>Aksi</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                <td>1</td>
+                <td>Pelatihan HTML</td>
+                <td>12 September 2017</td>
+                <td>Pelatihan</td>
+                <td>Administrator</td>
+                <td>
+                  <button type="button" class="btn btn-sm bg-navy"><i class="fa fa-eye-slash"></i></button>
+                  <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
+                  <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
+                </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                <th>No.</th>
+                <th>Judul Berita</th>
+                <th>Tanggal</th>
+                <th>Kategori</th>
+                <th>Penulis</th>
+                <th>Aksi</th>
+                </tr>
+                </tfoot>
+            </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->

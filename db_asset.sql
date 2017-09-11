@@ -26,6 +26,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `tb_inven`
 --
 
+CREATE DATABASE `db_asset` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `db_asset`;
+
 CREATE TABLE `tb_inven` (
   `id` int(11) NOT NULL,
   `jenis` enum('Notebook','Desktop','Router','Switch','Access Point','Converter E1','Printer') NOT NULL,

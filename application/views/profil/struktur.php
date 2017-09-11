@@ -5,9 +5,8 @@
         <div class="row">
             <div class="col-sm-12">
                 <ol class="breadcrumb">
-                    <li><a href="#">Home</a></li>
                     <li><a href="#">Profil</a></li>
-                    <li class="active">Struktur Organisasi</li>
+                    <li class="active">Struktur</li>
                 </ol>                    
             </div>
         </div>

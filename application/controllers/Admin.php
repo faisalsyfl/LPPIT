@@ -27,8 +27,9 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/login');
 	}
 	public function newsAll()	{
+		$data['all'] = $this->Berita->selectAll()->result_array();		
 		$this->load->view('admin/templates/header');
-		$this->load->view('admin/newsAll');
+		$this->load->view('admin/newsAll',$data);
 		$this->load->view('admin/templates/footer');
 	}
 	public function newsPost()	{
@@ -37,8 +38,9 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/templates/footer');
 	}
 	public function trainingAll()	{
+		$data['all'] = $this->Pelatihan->selectAll()->result_array();
 		$this->load->view('admin/templates/header');
-		$this->load->view('admin/trainingAll');
+		$this->load->view('admin/trainingAll',$data);
 		$this->load->view('admin/templates/footer');
 	}
 	public function trainingPost()	{
@@ -46,4 +48,29 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/trainingPost');
 		$this->load->view('admin/templates/footer');
 	}
+	public function addTraining(){
+		// var_dump($this->input->post());
+		$data = $this->input->post();
+		$data['start'] = explode(" - ",$data['times'])[0];
+		$data['start'] = date("Y-m-d", strtotime($data['start']));
+		$data['end'] = explode(" - ",$data['times'])[1];
+		$data['end'] = date("Y-m-d", strtotime($data['end']));
+		unset($data['times']);
+		unset($data['_wysihtml5_mode']);
+		$data['stats'] = 1;
+		var_dump($data);
+		$this->Pelatihan->insert($data);
+		redirect('Admin/trainingAll');
+	}
+
+	public function addNews(){
+		// var_dump($this->input->post());
+		$data = $this->input->post();
+		$data['tanggal'] = date('Y-m-d');
+		unset($data['_wysihtml5_mode']);
+		$data['stats'] = 1;
+		var_dump($data);
+		$this->Berita->insert($data);
+		redirect('Admin/trainingAll');
+	}	
 }

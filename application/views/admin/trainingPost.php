@@ -20,12 +20,12 @@
           <!-- quick email widget -->
           <div class="box box-info">
             <div class="box-body">
-              <form action="#" method="post">
+              <?php echo form_open('Admin/addTraining'); ?>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="training-title" placeholder="Judul Pelatihan">
+                  <input type="text" class="form-control" name="nama" placeholder="Judul Pelatihan" required="">
                 </div>
                 <div class="form-group">
-                  <select class="form-control select2" style="width: 100%;">
+                  <select class="form-control select2" name="kategori" style="width: 100%;" required="">
                     <option selected="selected" disabled="disabled">- Kategori -</option>
                     <option>Artificial Intellegence</option>
                     <option>Micro Controller</option>
@@ -39,26 +39,26 @@
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" class="form-control pull-right" id="reservation" placeholder="Tanggal">
+                    <input type="text" class="form-control pull-right" id="reservation" name="times" placeholder="Tanggal" required="">
                   </div>
                   <!-- /.input group -->
                 </div>
                 <!-- /.form group -->
                 <div class="form-group">
-                  <input type="text" class="form-control" name="training-category" placeholder="Tempat">
+                  <input type="text" class="form-control" name="tempat" placeholder="Tempat">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="training-category" placeholder="Pemateri">
+                  <input type="text" class="form-control" name="pemateri" placeholder="Pemateri">
                 </div>
                 <div>
-                  <textarea class="textarea" placeholder="Keterangan" style="width: 100%; height: 150px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                </div>
-              </form>
+                  <textarea class="textarea" placeholder="Keterangan" name="keterangan" style="width: 100%; height: 150px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                </div>s
             </div>
             <div class="box-footer clearfix">
-              <button type="button" class="pull-right btn btn-default" id="sendEmail">Kirim
+              <button type="submit" class="pull-right btn btn-default" id="sendEmail" >Kirim
                 <i class="fa fa-arrow-circle-right"></i></button>
             </div>
+            </form>
           </div>
 
         </section>

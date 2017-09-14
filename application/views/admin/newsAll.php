@@ -24,36 +24,40 @@
             <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                <th>No.</th>
-                <th>Judul Berita</th>
-                <th>Tanggal</th>
-                <th>Kategori</th>
-                <th>Penulis</th>
-                <th>Aksi</th>
+                    <th>No.</th>
+                    <th>Judul Berita</th>
+                    <th>Tanggal</th>
+                    <th>Kategori</th>
+                    <th>Penulis</th>
+                    <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
+                <?php 
+                $i=1;foreach($all as $row){
+                 ?>
                 <tr>
-                <td>1</td>
-                <td>Pelatihan HTML</td>
-                <td>12 September 2017</td>
-                <td>Pelatihan</td>
-                <td>Administrator</td>
-                <td>
-                  <button type="button" class="btn btn-sm bg-navy"><i class="fa fa-eye-slash"></i></button>
-                  <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
-                  <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
-                </td>
+                    <td><?php echo $i++; ?></td>
+                    <td><?php echo "Pelatihan ".$row['judul']; ?>L</td>
+                    <td><?php echo $row['tanggal']; ?></td>
+                    <td><?php echo $row['kategori']; ?></td>
+                    <td><?php echo $row['penulis']; ?></td>
+                    <td>
+                      <button type="button" class="btn btn-sm bg-navy"><i class="fa fa-eye-slash"></i></button>
+                      <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
+                    </td>
                 </tr>
+                <?php } ?>
                 </tbody>
                 <tfoot>
                 <tr>
-                <th>No.</th>
-                <th>Judul Berita</th>
-                <th>Tanggal</th>
-                <th>Kategori</th>
-                <th>Penulis</th>
-                <th>Aksi</th>
+                    <th>No.</th>
+                    <th>Judul Berita</th>
+                    <th>Tanggal</th>
+                    <th>Kategori</th>
+                    <th>Penulis</th>
+                    <th>Aksi</th>
                 </tr>
                 </tfoot>
             </table>

@@ -24,41 +24,42 @@
             <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                <th>No.</th>
-                <th>Nama Pelatihan</th>
-                <th>Kategori</th>
-                <th>Tanggal Dimulai</th>
-                <th>Tanggal Berakhir</th>
-                <th>Tempat</th>
-                <th>Pemateri</th>
-                <th>Keterangan</th>
-                <th>Aksi</th>
+                    <th>No.</th>
+                    <th>Nama Pelatihan</th>
+                    <th>Kategori</th>
+                    <th>Tanggal</th>
+                    <th>Tempat</th>
+                    <th>Pemateri</th>
+                    <th>Keterangan</th>
+                    <th>Aksi</th>
                 </tr>
                 </thead>
                 <tbody>
+                <?php 
+                $i=1;foreach($all as $row){
+                 ?>
                 <tr>
-                <td>1</td>
-                <td>Internet Security</td>
-                <td>Komputer</td>
-                <td>09/11/2017</td>
-                <td>09/18/2017</td>
-                <td>University Center</td>
-                <td>Ono W. Purbo</td>
-                <td>Lorem ipsum dolor sit amet</td>
-                <td>
-                  <button type="button" class="btn btn-sm bg-navy"><i class="fa fa-eye-slash"></i></button>
-                  <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
-                  <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
-                </td>
+                    <td><?php echo $i++; ?></td>
+                    <td><?php echo $row['nama']; ?></td>
+                    <td><?php echo $row['kategori']; ?></td>
+                    <td><?php echo $row['start']."-".$row['end']; ?></td>
+                    <td><?php echo $row['tempat'] ?></td>
+                    <td><?php echo $row['pemateri'] ?></td>
+                    <td><?php echo $row['keterangan'] ?></td>
+                    <td>
+                      <button type="button" class="btn btn-sm bg-navy"><i class="fa fa-eye-slash"></i></button>
+                      <button type="button" class="btn btn-sm bg-orange"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
+                    </td>
                 </tr>
+                <?php } ?>
                 </tbody>
                 <tfoot>
                 <tr>
                 <th>No.</th>
                 <th>Nama Pelatihan</th>
                 <th>Kategori</th>
-                <th>Tanggal Dimulai</th>
-                <th>Tanggal Berakhir</th>
+                <th>Tanggal</th>
                 <th>Tempat</th>
                 <th>Pemateri</th>
                 <th>Keterangan</th>

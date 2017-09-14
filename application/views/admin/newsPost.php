@@ -20,19 +20,25 @@
           <!-- quick email widget -->
           <div class="box box-info">
             <div class="box-body">
-              <form action="#" method="post">
+                <?php echo form_open('Admin/addNews'); ?>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="news-title" placeholder="Judul Berita">
+                  <input type="text" class="form-control" name="judul" placeholder="Judul Berita">
                 </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="kategori" placeholder="Kategori">
+                </div>        
+                <div class="form-group">
+                  <input type="text" class="form-control" name="penulis" placeholder="Penulis">
+                </div>                        
                 <div>
-                  <textarea class="textarea" placeholder="Teks Berita" style="width: 100%; height: 300px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                  <textarea class="textarea" placeholder="Teks Berita" name="teks" style="width: 100%; height: 300px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                 </div>
-              </form>
             </div>
             <div class="box-footer clearfix">
-              <button type="button" class="pull-right btn btn-default" id="sendEmail">Kirim
+              <button type="submit" class="pull-right btn btn-default" id="sendEmail">Kirim
                 <i class="fa fa-arrow-circle-right"></i></button>
             </div>
+            </form>
           </div>
 
         </section>

@@ -47,14 +47,14 @@
 					<span class="sr-only">Toggle Navigation</span>
 					<i class="fa fa-bars"></i>
 				</button>
-				<a href="index.html" class="navbar-brand">
+				<a href="<?php echo base_url(); ?>" class="navbar-brand">
                     <img src="<?php echo base_url(); ?>assets/img/lp2it.png" alt="Post" style="margin-top:3px;">
 				</a>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-navbar-collapse">
                     <ul class="nav navbar-nav main-navbar-nav">
- <li <?php if(is_null($this->uri->segment(1))) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>" title="">BERANDA</a></li>
-                        <li <?php if($this->uri->segment(1) == "Profil") echo "class='active'"; ?>><a href="<?php echo site_url(); ?>Profil" title="">PROFIL</a></li>
+                        <li <?php if(is_null($this->uri->segment(1))) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>" title="">BERANDA</a></li>
+                        <li <?php if($this->uri->segment(1) == "Profil") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Profil" title="">PROFIL</a></li>
                         <li <?php if($this->uri->segment(1) == "Berita") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Berita" title="">BERITA</a></li>
                         <li class="dropdown">
                             <a href="#" title="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PELATIHAN <span class="caret"></span></a>
@@ -64,7 +64,7 @@
                                 <li><a href="#" title="">PELATIHAN 3</a></li>
                             </ul>
                         </li>
-                        <li><a href="#" title="">KONTAK</a></li>
+                        <li <?php if($this->uri->segment(1) == "Kontak") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Kontak" title="">KONTAK</a></li>
                     </ul>                           
                 </div><!-- /.navbar-collapse -->                
 				<!-- END MAIN NAVIGATION -->

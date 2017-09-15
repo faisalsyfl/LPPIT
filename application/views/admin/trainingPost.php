@@ -52,7 +52,7 @@
                 </div>
                 <div>
                   <textarea class="textarea" placeholder="Keterangan" name="keterangan" style="width: 100%; height: 150px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-                </div>s
+                </div>
             </div>
             <div class="box-footer clearfix">
               <button type="submit" class="pull-right btn btn-default" id="sendEmail" >Kirim

@@ -20,6 +20,10 @@ SET time_zone = "+00:00";
 -- Database: `db_lppit`
 --
 
+DROP DATABASE IF EXISTS `db_lppit`;
+CREATE DATABASE `db_lppit` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `db_lppit`;
+
 -- --------------------------------------------------------
 
 --

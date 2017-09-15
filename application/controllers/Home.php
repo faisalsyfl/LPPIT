@@ -33,4 +33,9 @@ class Home extends CI_Controller {
 		$this->load->view('berita');
 		$this->load->view('templates/footer');
 	}
+	public function kontak(){
+		$this->load->view('templates/header');
+		$this->load->view('kontak');
+		$this->load->view('templates/footer');
+	}
 }

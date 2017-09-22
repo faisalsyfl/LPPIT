@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Berita extends CI_Model {
+class News extends CI_Model {
 
 	public $tableName;
 

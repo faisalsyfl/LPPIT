@@ -20,6 +20,7 @@ class Pelatihan extends CI_Model {
 	}
 	public function insert($data){
 		$this->db->insert($this->tableName,$data);
+		
 	}
 
 }

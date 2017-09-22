@@ -28,11 +28,6 @@ class Home extends CI_Controller {
 		$this->load->view('profil');
 		$this->load->view('templates/footer');		
 	}
-	public function berita(){
-		$this->load->view('templates/header');
-		$this->load->view('berita');
-		$this->load->view('templates/footer');
-	}
 	public function kontak(){
 		$this->load->view('templates/header');
 		$this->load->view('kontak');

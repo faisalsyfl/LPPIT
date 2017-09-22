@@ -19,15 +19,15 @@ class Admin extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()	{
-		$this->load->view('admin/templates/header');
-		$this->load->view('admin/index');
-		$this->load->view('admin/templates/footer');
+		$this->load->view('templates/header');
+		$this->load->view('berita');
+		$this->load->view('templates/footer');
 	}
 	public function login()	{
 		$this->load->view('admin/login');
 	}
 	public function newsAll()	{
-		$data['all'] = $this->Berita->selectAll()->result_array();		
+		$data['all'] = $this->News->selectAll()->result_array();		
 		$this->load->view('admin/templates/header');
 		$this->load->view('admin/newsAll',$data);
 		$this->load->view('admin/templates/footer');
@@ -70,7 +70,7 @@ class Admin extends CI_Controller {
 		unset($data['_wysihtml5_mode']);
 		$data['stats'] = 1;
 		var_dump($data);
-		$this->Berita->insert($data);
+		$this->News->insert($data);
 		redirect('Admin/trainingAll');
 	}	
 }

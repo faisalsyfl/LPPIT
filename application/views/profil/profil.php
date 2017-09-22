@@ -16,12 +16,35 @@
     <div class="container">
         <div class="row">
             <section class="page col-sm-9">
-                <h2 class="page-title">TENTANG KAMI</h2>
+                <h2 class="page-title">Latar Belakang</h2>
                 <div class="entry text-justify">
-                    <p>Fakultas Pendidikan Matematika dan Ilmu Pengetahuan Alam (FPMIPA) merupakan unsur pelaksana akademik yang bertugas mengkoordinasikan pelaksanaan kegiatan akademik bidang MIPA dan pendidikan MIPA. FPMIPA merupakan satu dari tujuh fakultas di UPI, bertugas menyiapkan guru MIPA dan ilmuwan bidang MIPA dituntut untuk menghasilkan lulusan yang mempunyai daya saing tinggi dalam era globalisasi. FPMIPA didirikan pertama kali dengan nama Jurusan Ilmu Pasti Alam pada tahun 1954, Fakultas Keguruan Ilmu Eksakta (FKIE) pada tahun 1963, dan diubah menjadi FPMIPA pada tahun 1983.</p>
+                    <p>Sejak didirikan pada 1954 dengan nama Perguruan Tinggi Pendidikan Guru (PTPG), kemudian berubah menjadi Institut Keguruan dan Ilmu Pendidikan (IKIP) Bandung, dan sekarang menjadi Universitas Pendidikan Indonesia (UPI) dengan status Perguruan Tinggi Negeri Badan Hukum (PTN bh), UPI secara konsisten dan berkelanjutan menempatkan pendidikan sebagai kiprah utama dalam melaksanakan pengabdian kepada negara dan bangsa. Jati diri ini tetap dipegang teguh dan bahkan dikokohkan dalam setiap kebijakan dan program yang dikembangkan. Dalam menjalankan kiprahnya, UPI senantiasa berupaya untuk aktif melakukan perubahan secara internal dan rensponsif terhadap faktor-faktor eksternal.</p>
 
-                    <p>Setelah melalui proses evaluasi kelayakan oleh Komisi Disiplin Ilmu (KDI) MIPA, pada tahun 1998 dan 1999, Direkur Jenderal Pendidikan Tinggi merekomendasikan pembukaan program-program studi nonpendidikan di FPMIPA UPI melalui Surat Dirjen Dikti Nomor 910/D/T/98 tanggal 15 April 1998 dan SK Dirjen Dikti No. 227/DIKTI/Kep/1999 tanggal 11 Mei 1999. Rekomendasi perluasan mandat akademik ini didasarkan pada tuntutan masyarakat untuk memenuhi kebutuhan tenaga kerja berpendidikan tinggi dalam bidang MIPA dan kelayakan FPMIPA ditinjau dari kuantitas, kualifikasi, keahlian, dan kegiatan keilmuan dosen, kelengkapan sarana laboratorium, serta rancangan kurikulum.</p>
-                        
+                    <p>Sebagai perguruan tinggi negeri badan hukum yang bersifat otonom, UPI bertekad menunaikan amanahnya secara bertanggung jawab, mandiri, berintegritas tinggi, dengan memperhatikan aspek transparansi, akuntabilitas, pertumbuhan, keselarasan, pemerataan, dan keterjangkauan, sehingga tumbuh rasa kepemilikan masyarakat luas terhadap UPI.</p>
+
+                    <p>Salah satu konsekuensi perubahan status baru UPI menjadi PTN bh diantaranya terkait kewenangan dan keleluasaan untuk mengelola kekayaan (keuangan dan asset) dan mengembangkan sumber pendapatan secara mandiri/ otonom. Mengacu kepada Pasal 64 Statuta UPI, disebutkan bahwa usaha UPI dilakukan melalui badan usaha UPI, pengelolaan kekayaan UPI, dan pemanfaatan tanah untuk menghasilkan dana penunjang penyelenggaraan Tridharma Perguruan Tinggi. Sebagai representasi dari badan usaha UPI dalam melaksanakan usaha UPI, maka dibentuklah Badan Pengelolaan dan Pengembangan Usaha (BPPU), yang secara kelembagaan (SOTK 2015) berada di bawah Wakil Rektor (WR) Bidang Riset, Kemitraan dan Usaha.</p>
+
+                    <p>BPPU inilah yang diamanatkan untuk dapat menjadi motor penggerak usaha UPI sebagai income generating unit untuk memperoleh pendapatan dari berbagai sumber, berdasarkan Peraturan Pemerintah Nomor 15 Tahun 2014 tentang Statuta Universitas Pendidikan Indonesia, disebutkan bahwa sumber pendapatan UPI selain dari anggaran pendapatan dan belanja Negara (APBN), pendanaan UPI juga dapat berasal dari:</p>
+                    <ol>
+                        <li>Masyarakat</li>
+                        <li>Biaya Pendidikan</li>
+                        <li>Pengelolaan dana abadi dan usaha-usaha UPI</li>
+                        <li>Kerja sama Tridharma</li>
+                        <li>Pengelolaan kekayaan negara yang diberikan oleh Pemerintah dan pemerintah daerah untuk kepentingan pengembangan pendidikan tinggi</li>
+                        <li>Sumber lain yang sah</li>
+                    </ol>
+                    <p>Sedangkan dalam Peraturan Pemerintah No. 26 Tahun 2015 tentang Mekanisme Pendanaan PTN Badan Hukum, disebutkan pendanaan PTN Badan Hukum yang bersumber dari selain APBN dapat bersumber dari:</p>
+                    <ol>
+                        <li>Masyarakat</li>
+                        <li>Biaya Pendidikan</li>
+                        <li>Pengolaan dana abadi</li>
+                        <li>Usaha PTN Badan Hukum</li>
+                        <li>Kerja sama tridharma Perguruan Tinggi</li>
+                        <li>Pengelolaan kekayaan PTN Badan Hukum</li>
+                        <li>Anggaran pendapatan dan belanja daerah</li>
+                        <li>Pinjaman</li>
+                    </ol>
+                    <p>Secara garis besar, sumber-sumber pendanaan/ pendapatan yang boleh didapatkan UPI sesuai PP No. 15/2014 dan PP No. 26/2015 adalah sama, kecuali pada PP No. 26/2015 ada tambahan bisa berupa pinjaman. Upaya pengelolaan dan pengembangan sumber-sumber pendapatan tersebut dapat dilaksanakan dalam kerangka kerja sama, layanan, dan pengembangan unit-unit usaha produktif, yang melibatkan dan memberdayakan seluruh stakeholder UPI dengan terus mempertahankan Pendidikan sebagai core business dan mission differentiation-nya. </p>                    
                 </div>
             </section>
             <aside class="sidebar col-sm-3">

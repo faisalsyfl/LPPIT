@@ -6,8 +6,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h1>LP2IT</h1>
-                        <h2>Lembaga Pelatihan dan Penerapan Ilmu dan Teknologi</h2>
+					<center>
+                        <h1 style="color: #ffc801; font-size: 5em;">LP2IT</h1>
+                        <h2>Lembaga Pelatihan,<br>Penerapan Ilmu dan Teknologi</h2>
+						<a href="<?php echo site_url();?>Request" class="btn btn-outline btn-pelatihan">Pelatihan</a>
+					</center>
                     </div>
                 </div>
             </div>
@@ -16,25 +19,14 @@
     <section class="boxes_area">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-12">
                     <div class="box">
-                        <h3>LEADING</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
-                        <i class="fa fa-arrow-up"></i>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="box">
-                        <h3>UNGGUL</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
-                        <i class="fa fa-university"></i>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="box">
-                        <h3>OUTSTANDING</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
-                        <i class="fa fa-clipboard"></i>
+						<center>
+						<blockquote>
+							<h3 class="visi-index">Menjadi unit usaha Produktif LP2IT Universitas Pendidikan Indonesia dalam mencapai kepeloporan dan keunggulan di bidang pendidikan se-ASEAN pada tahun 2020</h3>
+						</blockquote>
+						<br>
+						</center>
                     </div>
                 </div>
             </div>

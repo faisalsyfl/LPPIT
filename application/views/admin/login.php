@@ -44,13 +44,13 @@
   <div class="login-box-body">
     <p class="login-box-msg">Silahkan masuk menggunakan username dan password anda</p>
 
-    <form action="<?php echo site_url(); ?>Admin/" method="post">
+    <form action="<?php echo site_url(); ?>Admin/auth" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Username">
+        <input type="text" class="form-control" placeholder="Username" name="uname">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control password" placeholder="Password">
+        <input type="password" class="form-control password" placeholder="Password" name="pass">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">

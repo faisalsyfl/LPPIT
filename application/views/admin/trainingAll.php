@@ -42,7 +42,7 @@
                     <td><?php echo $i++; ?></td>
                     <td><?php echo $row['nama']; ?></td>
                     <td><?php echo $row['kategori']; ?></td>
-                    <td><?php echo $row['start']."-".$row['end']; ?></td>
+                    <td><?php echo $row['start']." s/d ".$row['end']; ?></td>
                     <td><?php echo $row['tempat'] ?></td>
                     <td><?php echo $row['pemateri'] ?></td>
                     <td><?php echo $row['keterangan'] ?></td>

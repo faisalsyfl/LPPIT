@@ -42,75 +42,23 @@
     </section>
     <section class="services">
         <h2 class="section-title">PROGRAM PELATIHAN</h2>
-        <p class="desc">Berikut program pelatihan yang disediakan oleh LP2IT</p>
+        <p class="desc">Berikut program pelatihan yang telah dilaksanakan oleh LP2IT</p>
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
+                <?php foreach($allp as $row){ ?>
+                <div class="col-md-4 col-sm-6 col-xs-12">   
                     <div class="media">
                         <div class="media-left media-middle">
-                            <i class="fa fa-cogs"></i>
+                            <i class="fa fa-<?php if($row['kategori']=='Keuangan') echo 'money'; elseif($row['kategori']=='Teknologi Informasi') echo 'cogs'; elseif($row['kategori'] =='Pendidikan') echo 'university'; elseif($row['kategori'] == 'Sastra') echo 'book'; else echo 'file-text-o';?>"></i>
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading">PELATIHAN 1</h4>
-                            <p>Lorem ipsum dolor amet,consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
+                            <h4 class="media-heading">Pelatihan <?php echo $row['nama']; ?></h4>
+                            <p><?php echo mb_strimwidth($row['keterangan'], 0, 100, "..."); ?></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="media">
-                        <div class="media-left media-middle">
-                            <i class="fa fa-user-md"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">PELATIHAN 2</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="media">
-                        <div class="media-left media-middle">
-                            <i class="fa fa-stethoscope"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">PELATIHAN 3</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="media">
-                        <div class="media-left media-middle">
-                            <i class="fa fa-graduation-cap"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">PELATIHAN 4</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="media">
-                        <div class="media-left media-middle">
-                            <i class="fa fa-file-text-o"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">PELATIHAN 5</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="media">
-                        <div class="media-left media-middle">
-                            <i class="fa fa-heartbeat"></i>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">PELATIHAN 6</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id pulvinar magna. Aenean accumsan iaculis lorem, nec sodales lectus auctor tempor.</p>
-                        </div>
-                    </div>
-                </div>                     
+                <?php } ?>
+                                  
             </div>
         </div>
     </section>

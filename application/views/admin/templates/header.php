@@ -79,7 +79,7 @@
                   <a href="#" class="btn btn-default btn-flat"><i class="fa fa-user"></i> Profil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Keluar</a>
+                  <a href="<?php echo base_url(); ?>" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Keluar</a>
                 </div>
               </li>
             </ul>

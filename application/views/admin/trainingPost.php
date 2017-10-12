@@ -27,10 +27,10 @@
                 <div class="form-group">
                   <select class="form-control select2" name="kategori" style="width: 100%;" required="">
                     <option selected="selected" disabled="disabled">- Kategori -</option>
-                    <option>Artificial Intellegence</option>
-                    <option>Micro Controller</option>
-                    <option>Software Engineering</option>
-                    <option>Network</option>
+                    <option>Keuangan</option>
+                    <option>Teknologi Informasi</option>
+                    <option>Pendidikan</option>
+                    <option>Sastra</option>
                   </select>
                 </div>
                 <!-- Date range -->

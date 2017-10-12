@@ -13,7 +13,7 @@ class News extends CI_Model {
 	public function selectAll($from=0,$offset=0){
 		$this->db->select('*');
 		$this->db->from($this->tableName);
-		$this->db->order_by('judul','DESC');
+		$this->db->order_by('id','DESC');
 		$this->db->limit($from,$offset);
 
 		return $this->db->get();

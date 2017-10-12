@@ -18,12 +18,9 @@
                 <div class="col-md-3 col-sm-6 col-xs-12 fbox">
                     <h4>PROGRAM PELATIHAN</h4>
                     <ul class="big">
-                        <li><a href="#" title="">Pelatihan 1</a></li>
-                        <li><a href="#" title="">Pelatihan 2</a></li>
-                        <li><a href="#" title="">Pelatihan 3</a></li>
-                        <li><a href="#" title="">Pelatihan 4</a></li>
-                        <li><a href="#" title="">Pelatihan 5</a></li>
-                        <li><a href="#" title="">Pelatihan 6</a></li>
+                    <?php foreach($allp as $row){ ?>
+                        <li><a href="#" title="">Pelatihan <?php echo $row['nama']; ?></a></li>
+                    <?php } ?>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 fbox">

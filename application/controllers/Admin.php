@@ -19,12 +19,20 @@ class Admin extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()	{
-		$this->load->view('templates/header');
-		$this->load->view('berita');
-		$this->load->view('templates/footer');
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/index');
+		$this->load->view('admin/templates/footer');
 	}
 	public function login()	{
 		$this->load->view('admin/login');
+	}
+	public function auth(){
+		$post = $this->input->post();
+		if($post['uname'] == 'admin' && $post['pass'] == 'admin'){
+			redirect('Admin/');			
+		}else{
+			redirect('Admin/login');			
+		}
 	}
 	public function newsAll()	{
 		$data['all'] = $this->News->selectAll()->result_array();		

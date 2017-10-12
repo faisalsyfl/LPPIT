@@ -22,6 +22,18 @@
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 slideanim">
                         <input type="tel" class="form-control pno" name="phone" placeholder="Nomor Telepon" required/>
                     </div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 slideanim">
+						<select id="category" class="form-control first-name" name="category" onchange="handleSelect()" required>
+							<option selected="selected" style="color: #9e9e9e;" disabled>- Kategori -</option>
+							<option value="Pendidikan">Pendidikan</option>
+							<option value="Teknologi">Teknologi</option>
+							<option value="Keuangan">Keuangan</option>
+							<option value="Lainnya">Lainnya...</option>
+						</select>
+                    </div>
+					<div class="form-group col-lg-6 col-md-6 col-sm-6 slideanim">
+                        <input id="lainnya_text" type="text" class="form-control mail" name="other" placeholder="Tulis lainnya" disabled/>
+                    </div>
                     <div class="clearfix"></div>
 					<div class="form-group col-lg-12 slideanim">
                         <textarea class="form-control" rows="6" name="message" placeholder="Keterangan Pelatihan"></textarea>
@@ -29,8 +41,8 @@
 					<div class="form-group col-lg-6 col-md-6 col-sm-6 slideanim">
 						<h5>Daftar Peserta</h5>
 						<p>
-							Silahkan unduh berkas excel berikut untuk daftar peserta <a href="#" style="font-weight:bold; color: #1d76f6">disini</a><br><br>
-							Unggah berkas daftar peserta: <input type="file" required/>
+							Silahkan unduh format berkas excel untuk daftar peserta <a href="#" style="font-weight:bold; color: #1d76f6">disini</a><br>
+							Unggah berkas daftar peserta: <br><br><input type="file" required/>
 						</p>
                     </div>
 					<div class="form-group col-lg-6 col-md-6 col-sm-6 slideanim">
@@ -51,3 +63,13 @@
 </section>
 <br>
 <br>
+
+<script>
+	function handleSelect() {
+		 if (document.getElementById("category").selectedIndex == "4") {
+			 document.getElementById('lainnya_text').disabled = false;
+		 } else {
+			 document.getElementById('lainnya_text').disabled = true;
+		 }
+	 }
+</script>

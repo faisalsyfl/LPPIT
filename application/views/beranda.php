@@ -67,7 +67,7 @@
                                     <div class="caption">
                                         <h3><a href="#">MENINGKATKAN KOMPETENSI MELALUI PENDIDIKAN UNTUK MELAWAN MASALAH SOSIAL</a></h3>
                                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                        <a href="#" class="btn btn-link" role="button">More</a>
+                                        <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
                                     </div>
                                 </div>                                        
                             </li>
@@ -77,7 +77,7 @@
                                     <div class="caption">
                                         <h3><a href="#">UPI – BANK BJB TANDATANGANI NOTA KESEPAHAMAN</a></h3>
                                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                        <a href="#" class="btn btn-link" role="button">More</a>
+                                        <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
                                     </div>
                                 </div>                                        
                             </li>
@@ -87,7 +87,7 @@
                                     <div class="caption">
                                         <h3><a href="#">PAHAMI SECARA KOMPREHENSIF PEREMPUAN DAN ANAK</a></h3>
                                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                        <a href="#" class="btn btn-link" role="button">More</a>
+                                        <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
                                     </div>
                                 </div>                                        
                             </li>
@@ -97,14 +97,14 @@
                                     <div class="caption">
                                         <h3><a href="#">PROF. DR. UYU WAHYUDIN, M.PD., GURU BESAR ILMU PENDIDIKAN LUAR SEKOLAH</a></h3>
                                         <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                        <a href="#" class="btn btn-link" role="button">More</a>
+                                        <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
                                     </div>
                                 </div>                                        
                             </li>                                    
                         </ul>
                     </div>
                     
-                    <div class="col-sm-9 home_bottom">
+                    <div class="col-sm-12 home_bottom">
                         <h2 class="sub_title">Mitra Pelatihan</h2>
                         <div class="clearfix"></div>
                         <div class="row">
@@ -194,28 +194,6 @@
                                 <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
                                 <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
                             </div>
-                        </div>                            
-                    </div>
-                    <div class="col-sm-3">
-                        <h2 class="sub_title w10">CALL YOU</h2>
-                        <div class="clearfix"></div>
-                        <div class="login-form-1">
-                            <form id="login-form" class="text-left">
-                                <div class="login-form-main-message"></div>
-                                <div class="main-login-form">
-                                    <div class="login-group">
-                                        <div class="form-group">
-                                            <label for="ad" class="sr-only">Name</label>
-                                            <input type="text" class="form-control" id="ad" name="ad" placeholder="Name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="tel" class="sr-only">Phone Number</label>
-                                            <input type="text" class="form-control" id="tel" name="tel" placeholder="Phone Number">
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
-                                </div>
-                            </form>
                         </div>                            
                     </div>
                 </div>

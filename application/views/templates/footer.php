@@ -6,7 +6,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-12 fbox">
                     <h4>LP2IT</h4>
                     <p class="text">
-                        <b>Lembaga Pelatihan dan Penerapan Ilmu dan Teknologi.</b><br>
+                        <b>Lembaga Pelatihan, Penerapan Ilmu dan Teknologi.</b><br>
                         Universitas Pendidikan Indonesia.
                     </p>
                     <ul class="list-inline">

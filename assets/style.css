@@ -278,9 +278,13 @@ blockquote cite:before {
 	text-transform: uppercase;
 }
 
-.btn-pelatihan:hover,activwe{
+.btn-pelatihan:hover,active{
 	-webkit-transition-duration: 5s; /* Safari */
     transition-duration: 0.3s;
 	background-color: #fff;
 	color: #1B6287;
+}
+
+.head2{
+    color:#005FA6;
 }

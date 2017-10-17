@@ -20,15 +20,21 @@ class Home extends CI_Controller {
 	 */
 
 	public function index()	{
-		$data['allp'] = $this->Pelatihan->selectAll(6)->result_array();		
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();		
 		$this->load->view('templates/header',$data);
 		$this->load->view('beranda',$data);
 		$this->load->view('templates/footer',$data);
 	}
-	public function kontak(){
-		$data['allp'] = $this->Pelatihan->selectAll(6)->result_array();		
+	public function kontak($suc=0){
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();		
 		$this->load->view('templates/header',$data);
 		$this->load->view('kontak',$data);
 		$this->load->view('templates/footer',$data);
+	}
+	public function kontakProses(){
+		$insert = $this->input->post();
+		// var_dump($insert);
+		$this->ModelPesan->insert($insert);
+		redirect('Kontak/1');
 	}
 }

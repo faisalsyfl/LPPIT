@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 14 Sep 2017 pada 17.13
+-- Generation Time: 17 Okt 2017 pada 19.14
 -- Versi Server: 10.1.9-MariaDB
 -- PHP Version: 7.0.1
 
@@ -20,40 +20,66 @@ SET time_zone = "+00:00";
 -- Database: `db_lppit`
 --
 
-DROP DATABASE IF EXISTS `db_lppit`;
-CREATE DATABASE `db_lppit` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `db_lppit`;
-
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `berita`
+-- Struktur dari tabel `tb_berita`
 --
 
-CREATE TABLE `berita` (
+CREATE TABLE `tb_berita` (
   `id` int(11) NOT NULL,
   `judul` varchar(255) NOT NULL,
   `tanggal` date NOT NULL,
   `kategori` varchar(255) NOT NULL,
   `penulis` varchar(255) NOT NULL,
   `teks` text NOT NULL,
+  `path` varchar(255) NOT NULL,
   `stats` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `berita`
---
-
-INSERT INTO `berita` (`id`, `judul`, `tanggal`, `kategori`, `penulis`, `teks`, `stats`) VALUES
-(1, 'MENINGKATKAN KOMPETENSI MELALUI PENDIDIKAN UNTUK MELAWAN MASALAH SOSIAL', '2017-09-14', 'DALAM NEGERI', 'Admin', '<p>adasdasdsadasdasd</p>', 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pelatihan`
+-- Struktur dari tabel `tb_galeri`
 --
 
-CREATE TABLE `pelatihan` (
+CREATE TABLE `tb_galeri` (
+  `id` int(11) NOT NULL,
+  `idp` int(11) NOT NULL,
+  `path` varchar(255) NOT NULL,
+  `tag` text
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_kontak`
+--
+
+CREATE TABLE `tb_kontak` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `instansi` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `telp` varchar(255) NOT NULL,
+  `pesan` text NOT NULL,
+  `stats` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_kontak`
+--
+
+INSERT INTO `tb_kontak` (`id`, `nama`, `instansi`, `email`, `telp`, `pesan`, `stats`) VALUES
+(1, 'Faisal', 'UPI', 'kampakhitam_berkarat@yahoo.com', '085793434357', 'aku adalah anak yang ganteng, semoga LP2it makin maju haha. aku adalah anak yang ganteng, semoga LP2it makin maju haha.', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_pelatihan`
+--
+
+CREATE TABLE `tb_pelatihan` (
   `id` int(11) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `kategori` varchar(255) NOT NULL,
@@ -61,32 +87,68 @@ CREATE TABLE `pelatihan` (
   `pemateri` varchar(255) NOT NULL,
   `start` date NOT NULL,
   `end` date NOT NULL,
+  `path` varchar(255) NOT NULL,
   `stats` tinyint(1) NOT NULL DEFAULT '0',
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data untuk tabel `pelatihan`
+-- Struktur dari tabel `tb_request`
 --
 
-INSERT INTO `pelatihan` (`id`, `nama`, `kategori`, `tempat`, `pemateri`, `start`, `end`, `stats`, `keterangan`) VALUES
-(1, 'Mewarnai', 'Multimedia dan Media Pembelajaran', 'Gedung Ilmu Komputer', 'Faisal Syaiful Anwar S.Kom', '2017-09-18', '2017-09-23', 1, 'Mewarnai adalah sebagian dari iman\r\n'),
-(2, 'Internet Security', 'Komputer', 'University Center', 'Ono W. Purbo', '2017-09-11', '2017-09-18', 1, 'Lorem ipsum');
+CREATE TABLE `tb_request` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `instansi` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `telepon` varchar(255) NOT NULL,
+  `kategori` varchar(255) NOT NULL,
+  `keterangan` text NOT NULL,
+  `file` varchar(255) NOT NULL,
+  `stats` int(2) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_request`
+--
+
+INSERT INTO `tb_request` (`id`, `nama`, `instansi`, `email`, `telepon`, `kategori`, `keterangan`, `file`, `stats`) VALUES
+(1, 'Faisal S A', 'SMA Negeri 11 Bandung', 'faisalsyfl@gmail.com', '085793434357', 'Teknologi', 'Pelatihan Web bagi siswa siswi, 40 orang', 'Excel_1508258471.xls', 0);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `berita`
+-- Indexes for table `tb_berita`
 --
-ALTER TABLE `berita`
+ALTER TABLE `tb_berita`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pelatihan`
+-- Indexes for table `tb_galeri`
 --
-ALTER TABLE `pelatihan`
+ALTER TABLE `tb_galeri`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_kontak`
+--
+ALTER TABLE `tb_kontak`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_pelatihan`
+--
+ALTER TABLE `tb_pelatihan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tb_request`
+--
+ALTER TABLE `tb_request`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -94,15 +156,30 @@ ALTER TABLE `pelatihan`
 --
 
 --
--- AUTO_INCREMENT for table `berita`
+-- AUTO_INCREMENT for table `tb_berita`
 --
-ALTER TABLE `berita`
+ALTER TABLE `tb_berita`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `tb_galeri`
+--
+ALTER TABLE `tb_galeri`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tb_kontak`
+--
+ALTER TABLE `tb_kontak`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `pelatihan`
+-- AUTO_INCREMENT for table `tb_pelatihan`
 --
-ALTER TABLE `pelatihan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+ALTER TABLE `tb_pelatihan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `tb_request`
+--
+ALTER TABLE `tb_request`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

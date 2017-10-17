@@ -5,8 +5,8 @@ class Pelatihan extends CI_Controller {
 
 
 	public function index()	{
-		$data['all'] = $this->News->selectAll(3)->result_array();
-		$data['allp'] = $this->Pelatihan->selectAll(6)->result_array();		
+		$data['all'] = $this->ModelNews->selectAll(3)->result_array();
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();		
 
 		// var_dump($data['all']);
 		$this->load->view('templates/header',$data);
@@ -14,7 +14,7 @@ class Pelatihan extends CI_Controller {
 		$this->load->view('templates/footer',$data);
 	}
 	public function view($id){
-		$data['news'] = $this->News->selectById($id)->row_array();
+		$data['news'] = $this->ModelNews->selectById($id)->row_array();
 		
 	}
 			

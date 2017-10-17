@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/daterangepicker/daterangepicker-bs3.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>assets/styleadmin.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -162,7 +163,9 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url(); ?>Admin/trainingAll"><i class="fa fa-th"></i> Semua Pelatihan</a></li>
+            <li><a href="<?php echo site_url(); ?>Admin/trainingAll"><i class="fa fa-th"></i> Semua Pelatihan<span class="pull-right-container">
+              <span class="label label-warning pull-right">4</span>
+            </span></a></li>
             <li><a href="<?php echo site_url(); ?>Admin/trainingPost"><i class="fa fa-edit"></i> Buat Pelatihan</a></li>
           </ul>
         </li>
@@ -176,6 +179,27 @@
             <li><a href="<?php echo site_url(); ?>Admin/newsPost"><i class="fa fa-edit"></i> Buat Berita</a></li>
           </ul>
         </li>
+        <li class="treeview">
+          <a href="<?php echo site_url(); ?>Admin/reqAll">
+            <i class="fa fa-reply-all"></i> <span>Permintaan Pelatihan</span></i>
+            <span class="pull-right-container">
+              <span class="label bg-orange pull-right">?</span>
+            </span>
+          </a>
+        </li>  
+        <li class="treeview">
+          <a href="<?php echo site_url(); ?>Admin/reqAll">
+            <i class="fa fa-photo"></i> <span>Galeri</span></i>
+          </a>
+        </li>                
+        <li class="treeview">
+          <a href="<?php echo site_url(); ?>Admin/kontakAll">
+            <i class="fa fa-envelope"></i> <span>Pesan</span></i>
+            <span class="pull-right-container">
+              <span class="label label-danger pull-right">?</span>
+            </span>
+          </a>
+        </li>        
         <!--
         <li class="treeview">
           <a href="#">

@@ -238,8 +238,12 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url(); ?>assets/js/AdminLTE/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="<?php echo base_url(); ?>assets/js/AdminLTE/demo.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/jquery.dataTables.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/dataTables.bootstrap.min.js"></script>    
 <script>
+      $('#dt').DataTable({
+        responsive:true
+      });
 
   //Date range picker
   $('#reservation').daterangepicker();

@@ -5,23 +5,27 @@ class Profil extends CI_Controller {
 
 
 	public function index()	{
-		$this->load->view('templates/header');
-		$this->load->view('profil/profil');
-		$this->load->view('templates/footer');
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();		
+		$this->load->view('templates/header',$data);
+		$this->load->view('profil/profil',$data);
+		$this->load->view('templates/footer',$data);
 	}
 	public function visimisi(){
-		$this->load->view('templates/header');
-		$this->load->view('profil/visimisi');
-		$this->load->view('templates/footer');		
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();				
+		$this->load->view('templates/header',$data);
+		$this->load->view('profil/visimisi',$data);
+		$this->load->view('templates/footer',$data);		
 	}
 	public function pimpinan(){
-		$this->load->view('templates/header');
-		$this->load->view('profil/pimpinan');
-		$this->load->view('templates/footer');		
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();				
+		$this->load->view('templates/header',$data);
+		$this->load->view('profil/pimpinan',$data);
+		$this->load->view('templates/footer',$data);		
 	}
 	public function struktur(){
-		$this->load->view('templates/header');
-		$this->load->view('profil/struktur');
-		$this->load->view('templates/footer');		
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();				
+		$this->load->view('templates/header',$data);
+		$this->load->view('profil/struktur',$data);
+		$this->load->view('templates/footer',$data);		
 	}			
 }

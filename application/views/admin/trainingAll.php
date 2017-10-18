@@ -21,7 +21,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-            <table id="example2" class="table table-bordered table-hover">
+            <table id="dt" class="table table-bordered table-hover">
                 <thead>
                 <tr>
                     <th>No.</th>
@@ -42,7 +42,7 @@
                     <td><?php echo $i++; ?></td>
                     <td><?php echo $row['nama']; ?></td>
                     <td><?php echo $row['kategori']; ?></td>
-                    <td><?php echo $row['start']."-".$row['end']; ?></td>
+                    <td><?php echo $row['start']." s/d ".$row['end']; ?></td>
                     <td><?php echo $row['tempat'] ?></td>
                     <td><?php echo $row['pemateri'] ?></td>
                     <td><?php echo $row['keterangan'] ?></td>

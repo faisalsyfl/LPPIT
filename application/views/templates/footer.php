@@ -6,7 +6,7 @@
                 <div class="col-md-3 col-sm-6 col-xs-12 fbox">
                     <h4>LP2IT</h4>
                     <p class="text">
-                        <b>Lembaga Pelatihan dan Penerapan Ilmu dan Teknologi.</b><br>
+                        <b>Lembaga Pelatihan, Penerapan Ilmu dan Teknologi.</b><br>
                         Universitas Pendidikan Indonesia.
                     </p>
                     <ul class="list-inline">
@@ -18,12 +18,9 @@
                 <div class="col-md-3 col-sm-6 col-xs-12 fbox">
                     <h4>PROGRAM PELATIHAN</h4>
                     <ul class="big">
-                        <li><a href="#" title="">Pelatihan 1</a></li>
-                        <li><a href="#" title="">Pelatihan 2</a></li>
-                        <li><a href="#" title="">Pelatihan 3</a></li>
-                        <li><a href="#" title="">Pelatihan 4</a></li>
-                        <li><a href="#" title="">Pelatihan 5</a></li>
-                        <li><a href="#" title="">Pelatihan 6</a></li>
+                    <?php foreach($allp as $row){ ?>
+                        <li><a href="#" title="">Pelatihan <?php echo $row['nama']; ?></a></li>
+                    <?php } ?>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 fbox">
@@ -58,6 +55,7 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+
     <script type="text/javascript">
         $('.carousel[data-type="multi"] .item').each(function(){
           var next = $(this).next();

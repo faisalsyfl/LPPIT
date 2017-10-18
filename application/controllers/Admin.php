@@ -19,15 +19,27 @@ class Admin extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()	{
-		$this->load->view('templates/header');
-		$this->load->view('berita');
-		$this->load->view('templates/footer');
+		$count['pelatihan'] = $this->ModelPelatihan->selectAll()->num_rows();
+		$count['galeri'] = $this->ModelGaleri->selectAll()->num_rows();
+		$count['berita'] = $this->ModelNews->selectAll()->num_rows();
+		$count['pesan'] = $this->ModelPesan->selectAll()->num_rows();
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/index',$count);
+		$this->load->view('admin/templates/footer');
 	}
 	public function login()	{
 		$this->load->view('admin/login');
 	}
+	public function auth(){
+		$post = $this->input->post();
+		if($post['uname'] == 'admin' && $post['pass'] == 'admin'){
+			redirect('Admin/');			
+		}else{
+			redirect('Admin/login');			
+		}
+	}
 	public function newsAll()	{
-		$data['all'] = $this->News->selectAll()->result_array();		
+		$data['all'] = $this->ModelNews->selectAll()->result_array();		
 		$this->load->view('admin/templates/header');
 		$this->load->view('admin/newsAll',$data);
 		$this->load->view('admin/templates/footer');
@@ -38,7 +50,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/templates/footer');
 	}
 	public function trainingAll()	{
-		$data['all'] = $this->Pelatihan->selectAll()->result_array();
+		$data['all'] = $this->ModelPelatihan->selectAll()->result_array();
 		$this->load->view('admin/templates/header');
 		$this->load->view('admin/trainingAll',$data);
 		$this->load->view('admin/templates/footer');
@@ -59,7 +71,7 @@ class Admin extends CI_Controller {
 		unset($data['_wysihtml5_mode']);
 		$data['stats'] = 1;
 		var_dump($data);
-		$this->Pelatihan->insert($data);
+		$this->ModelPelatihan->insert($data);
 		redirect('Admin/trainingAll');
 	}
 
@@ -70,7 +82,36 @@ class Admin extends CI_Controller {
 		unset($data['_wysihtml5_mode']);
 		$data['stats'] = 1;
 		var_dump($data);
-		$this->News->insert($data);
+		$this->ModelNews->insert($data);
 		redirect('Admin/trainingAll');
+	}
+	public function kontakAll()	{
+		$data['all'] = $this->ModelPesan->selectAll()->result_array();
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/kontakAll',$data);
+		$this->load->view('admin/templates/footer');
+	}
+	public function markUnread($id){
+		if($this->ModelPesan->selectById($id)->row()->stats == 0){
+			$this->ModelPesan->update($id,['stats' => 1]);
+		}else{
+			$this->ModelPesan->update($id,['stats' => 0]);
+		}
+		redirect('Admin/kontakAll');
+	}
+
+	public function reqAll(){
+		$data['all'] = $this->ModelRequest->selectAll()->result_array();
+		$this->load->view('admin/templates/header');
+		$this->load->view('admin/reqAll',$data);
+		$this->load->view('admin/templates/footer');		
+	}
+	public function markProcessed($id){
+		if($this->ModelRequest->selectById($id)->row()->stats == 0){
+			$this->ModelRequest->update($id,['stats' => 1]);
+		}else{
+			$this->ModelRequest->update($id,['stats' => 0]);
+		}
+		redirect('Admin/reqAll');
 	}	
 }

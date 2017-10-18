@@ -54,16 +54,24 @@
                 <div class="collapse navbar-collapse" id="bs-navbar-collapse">
                     <ul class="nav navbar-nav main-navbar-nav">
                         <li <?php if(is_null($this->uri->segment(1))) echo "class='active'"; ?>><a href="<?php echo base_url(); ?>" title="">BERANDA</a></li>
-                        <li <?php if($this->uri->segment(1) == "Profil") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Profil" title="">PROFIL</a></li>
-                        <li <?php if($this->uri->segment(1) == "Berita") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Berita" title="">BERITA</a></li>
+                        <li class="dropdown <?php if($this->uri->segment(1) == "Profil") echo "active"; ?>"  >
+                            <a href="#" title="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROFIL <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo base_url(); ?>Profil" title="">Tentang Kami</a></li>
+                                <li><a href="<?php echo base_url(); ?>Profil/visimisi" title="">Visi Misi</a></li>
+                                <li><a href="<?php echo base_url(); ?>Profil/struktur" title="">Struktur Organisasi</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li <?php if($this->uri->segment(1) == "Profil") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Profil" title="">PROFIL</a></li> -->
                         <li class="dropdown">
                             <a href="#" title="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PELATIHAN <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#" title="">PELATIHAN 1</a></li>
-                                <li><a href="#" title="">PELATIHAN 2</a></li>
-                                <li><a href="#" title="">PELATIHAN 3</a></li>
+                            <?php foreach($allp as $row){ ?>
+                                <li><a href="#" title="">Pelatihan <?php echo $row['nama']; ?></a></li>
+                            <?php } ?>
                             </ul>
                         </li>
+                        <li <?php if($this->uri->segment(1) == "Berita") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Berita" title="">BERITA</a></li>
                         <li <?php if($this->uri->segment(1) == "Kontak") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Kontak" title="">KONTAK</a></li>
                     </ul>                           
                 </div><!-- /.navbar-collapse -->                

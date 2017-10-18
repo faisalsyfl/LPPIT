@@ -18,19 +18,23 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
 	public function index()	{
-		$this->load->view('templates/header');
-		$this->load->view('beranda');
-		$this->load->view('templates/footer');
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();		
+		$this->load->view('templates/header',$data);
+		$this->load->view('beranda',$data);
+		$this->load->view('templates/footer',$data);
 	}
-	public function profil(){
-		$this->load->view('templates/header');
-		$this->load->view('profil');
-		$this->load->view('templates/footer');		
+	public function kontak($suc=0){
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();		
+		$this->load->view('templates/header',$data);
+		$this->load->view('kontak',$data);
+		$this->load->view('templates/footer',$data);
 	}
-	public function kontak(){
-		$this->load->view('templates/header');
-		$this->load->view('kontak');
-		$this->load->view('templates/footer');
+	public function kontakProses(){
+		$insert = $this->input->post();
+		// var_dump($insert);
+		$this->ModelPesan->insert($insert);
+		redirect('Kontak/1');
 	}
 }

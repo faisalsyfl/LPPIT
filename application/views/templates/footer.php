@@ -63,23 +63,22 @@
     <script src="<?php echo base_url(); ?>assets/js/Image-popup/script.js"></script>
 
     <script type="text/javascript">
-    <script type="text/javascript">
-        $('.carousel[data-typeImage-popup/').each(function(){
-          var next = $(this).next();
-          if (!next.length) {
-            next = $(this).siblings(':first');
-          }
-          next.children(':first-child').clone().appendTo($(this));
+        // $('.carousel[data-typeImage-popup/').each(function(){
+        //   var next = $(this).next();
+        //   if (!next.length) {
+        //     next = $(this).siblings(':first');
+        //   }
+        //   next.children(':first-child').clone().appendTo($(this));
 
-          for (var i=0;i<4;i++) {
-            next=next.next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
-            }
+        //   for (var i=0;i<4;i++) {
+        //     next=next.next();
+        //     if (!next.length) {
+        //         next = $(this).siblings(':first');
+        //     }
 
-            next.children(':first-child').clone().appendTo($(this));
-          }
-        });        
+        //     next.children(':first-child').clone().appendTo($(this));
+        //   }
+        // });        
     </script>
 </body>
 </html>

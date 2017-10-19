@@ -36,7 +36,7 @@
                 <?php 
                 $i=1;foreach($all as $row){
                  ?>
-                <tr>
+                <tr >
                     <td><?php echo $i++; ?></td>
                     <td><?php echo "Pelatihan ".$row['judul']; ?>L</td>
                     <td><?php echo $row['tanggal']; ?></td>

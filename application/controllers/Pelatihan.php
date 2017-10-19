@@ -1,24 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Berita extends CI_Controller {
-
+class Pelatihan extends CI_Controller {
 
 	public function index()	{
-		$data['all'] = $this->ModelNews->selectAll(3)->result_array();
-		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();		
 
 		// var_dump($data['all']);
 		$this->load->view('templates/header',$data);
 		$this->load->view('berita',$data);
 		$this->load->view('templates/footer',$data);
 	}
-	public function view($id){
-		$data['news'] = $this->ModelNews->selectById($id)->row_array();
-		
-	}
-	
-	function tanggal_indo($tanggal, $cetak_hari = false){
+	public function tanggal_indo($tanggal, $cetak_hari = false){
 		$hari = array ( 1 =>    'Senin',
 					'Selasa',
 					'Rabu',
@@ -50,5 +42,16 @@ class Berita extends CI_Controller {
 		}
 		return $tgl_indo;
 	}	
+	/*View every training by ID*/
+	public function view($id){
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();
+		$data['training'] = $this->ModelPelatihan->selectById($id)->row_array();
+		$data['training']['start'] = $this->tanggal_indo($data['training']['start'],true);
+		$data['training']['end'] = $this->tanggal_indo($data['training']['end'],true);
+		$this->load->view('templates/header',$data);
+		$this->load->view('pelatihan',$data);
+		$this->load->view('templates/footer',$data);
+	}
+	
 			
 }

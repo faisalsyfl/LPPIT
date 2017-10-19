@@ -1,6 +1,15 @@
-<link rel="stylesheet" href="<?php echo base_url('assets/css/main.css'); ?>">
-<br>
-<br>
+<div class="bread_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ol class="breadcrumb">
+                    <li class="active">Kontak</li>
+                </ol>                    
+            </div>
+        </div>
+    </div>
+</div>    
+
 <section class="contact" id="contact">
     <div class="container">
         <div class="col-lg-12 col-md-12 contact-wthree2">

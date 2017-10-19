@@ -14,6 +14,7 @@
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/style.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/Image-popup/magnific-popup.css" rel="stylesheet">
     
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -72,6 +73,7 @@
                             </ul>
                         </li>
                         <li <?php if($this->uri->segment(1) == "Berita") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Berita" title="">BERITA</a></li>
+                        <li <?php if($this->uri->segment(1) == "Galeri") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Galeri" title="">GALERI</a></li>
                         <li <?php if($this->uri->segment(1) == "Kontak") echo "class='active'"; ?>><a href="<?php echo base_url(); ?>Kontak" title="">KONTAK</a></li>
                     </ul>                           
                 </div><!-- /.navbar-collapse -->                

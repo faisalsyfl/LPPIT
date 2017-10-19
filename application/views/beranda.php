@@ -104,7 +104,7 @@
                         </ul>
                     </div>
                     
-                    <div class="col-sm-12 home_bottom">
+                    <!-- <div class="col-sm-12 home_bottom">
                         <h2 class="sub_title">Mitra Pelatihan</h2>
                         <div class="clearfix"></div>
                         <div class="row">
@@ -195,7 +195,8 @@
                                 <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
                             </div>
                         </div>                            
-                    </div>
+                    </div> -->
+                    
                 </div>
             </div>
         </div>

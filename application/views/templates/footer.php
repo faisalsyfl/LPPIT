@@ -55,9 +55,15 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/Image-popup/jquery.migrate.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/Image-popup/jquery.magnific-popup.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/Image-popup/jquery.imagesloaded.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/Image-popup/jquery.isotope.min.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/Image-popup/script.js"></script>
 
     <script type="text/javascript">
-        $('.carousel[data-type="multi"] .item').each(function(){
+    <script type="text/javascript">
+        $('.carousel[data-typeImage-popup/').each(function(){
           var next = $(this).next();
           if (!next.length) {
             next = $(this).siblings(':first');

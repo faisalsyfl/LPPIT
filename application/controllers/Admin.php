@@ -18,12 +18,21 @@ class Admin extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+	private $head;
+	public function __construct(){
+		parent::__construct();
+		$this->head['pelatihan'] = $this->ModelPelatihan->selectAll()->num_rows();
+		$this->head['galeri'] = $this->ModelGaleri->selectAll()->num_rows();
+		$this->head['berita'] = $this->ModelNews->selectAll()->num_rows();
+		$this->head['pesan'] = $this->ModelPesan->selectAll()->num_rows();
+		$this->head['request'] = $this->ModelRequest->selectAll()->num_rows();
+	}
 	public function index()	{
 		$count['pelatihan'] = $this->ModelPelatihan->selectAll()->num_rows();
 		$count['galeri'] = $this->ModelGaleri->selectAll()->num_rows();
 		$count['berita'] = $this->ModelNews->selectAll()->num_rows();
 		$count['pesan'] = $this->ModelPesan->selectAll()->num_rows();
-		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/header',$this->head);
 		$this->load->view('admin/index',$count);
 		$this->load->view('admin/templates/footer');
 	}
@@ -38,25 +47,15 @@ class Admin extends CI_Controller {
 			redirect('Admin/login');			
 		}
 	}
-	public function newsAll()	{
-		$data['all'] = $this->ModelNews->selectAll()->result_array();		
-		$this->load->view('admin/templates/header');
-		$this->load->view('admin/newsAll',$data);
-		$this->load->view('admin/templates/footer');
-	}
-	public function newsPost()	{
-		$this->load->view('admin/templates/header');
-		$this->load->view('admin/newsPost');
-		$this->load->view('admin/templates/footer');
-	}
+
 	public function trainingAll()	{
 		$data['all'] = $this->ModelPelatihan->selectAll()->result_array();
-		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/header',$this->head);
 		$this->load->view('admin/trainingAll',$data);
 		$this->load->view('admin/templates/footer');
 	}
 	public function trainingPost()	{
-		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/header',$this->head);
 		$this->load->view('admin/trainingPost');
 		$this->load->view('admin/templates/footer');
 	}
@@ -74,7 +73,26 @@ class Admin extends CI_Controller {
 		$this->ModelPelatihan->insert($data);
 		redirect('Admin/trainingAll');
 	}
+	public function disableTraining(){
+		if($this->ModelPelatihan->selectById($id)->row()->stats == 0){
+			$this->ModelPelatihan->update($id,['stats' => 1]);
+		}else{
+			$this->ModelPelatihan->update($id,['stats' => 0]);
+		}
+		redirect('Admin/trainingAll');		
+	}
 
+	public function newsAll()	{
+		$data['all'] = $this->ModelNews->selectAll()->result_array();		
+		$this->load->view('admin/templates/header',$this->head);
+		$this->load->view('admin/newsAll',$data);
+		$this->load->view('admin/templates/footer');
+	}
+	public function newsPost()	{
+		$this->load->view('admin/templates/header',$this->head);
+		$this->load->view('admin/newsPost');
+		$this->load->view('admin/templates/footer');
+	}
 	public function addNews(){
 		// var_dump($this->input->post());
 		$data = $this->input->post();
@@ -87,7 +105,7 @@ class Admin extends CI_Controller {
 	}
 	public function kontakAll()	{
 		$data['all'] = $this->ModelPesan->selectAll()->result_array();
-		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/header',$this->head);
 		$this->load->view('admin/kontakAll',$data);
 		$this->load->view('admin/templates/footer');
 	}
@@ -102,7 +120,7 @@ class Admin extends CI_Controller {
 
 	public function reqAll(){
 		$data['all'] = $this->ModelRequest->selectAll()->result_array();
-		$this->load->view('admin/templates/header');
+		$this->load->view('admin/templates/header',$this->head);
 		$this->load->view('admin/reqAll',$data);
 		$this->load->view('admin/templates/footer');		
 	}

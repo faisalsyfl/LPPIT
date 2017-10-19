@@ -19,7 +19,7 @@
 			<br/>
             <?php if ($this->uri->segment(1) == "RequestSuccess"){ ?>
             <div class="alert alert-success" role="alert">
-              Permintaan anda telah dikirim. Silahkan cek <b>email</b> & Telepon anda untuk info lebih lanjut.
+              Permintaan anda telah dikirim. Silahkan cek folder inbox atau spam <b>email</b> anda untuk info lebih lanjut.
             </div>
             <?php } ?>
 			<p style="color:black;">LP2IT menawarkan permintaan pelatihan bagi instansi yang ingin melaksanakan pelatihan. <br>Silahkan isi formulir dan berkas excel yang telah disediakan dibawah, kemudian unggah file tersebut.</p>

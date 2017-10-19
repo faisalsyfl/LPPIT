@@ -164,7 +164,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo site_url(); ?>Admin/trainingAll"><i class="fa fa-th"></i> Semua Pelatihan<span class="pull-right-container">
-              <span class="label label-warning pull-right">4</span>
+              <span class="label label-warning pull-right"><?php echo $pelatihan; ?></span>
             </span></a></li>
             <li><a href="<?php echo site_url(); ?>Admin/trainingPost"><i class="fa fa-edit"></i> Buat Pelatihan</a></li>
           </ul>
@@ -175,7 +175,9 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url(); ?>Admin/newsAll"><i class="fa fa-th"></i> Semua Berita</a></li>
+            <li><a href="<?php echo site_url(); ?>Admin/newsAll"><i class="fa fa-th"></i> Semua Berita<span class="pull-right-container">
+              <span class="label label-warning pull-right"><?php echo $berita; ?></span>
+            </span></a></li>
             <li><a href="<?php echo site_url(); ?>Admin/newsPost"><i class="fa fa-edit"></i> Buat Berita</a></li>
           </ul>
         </li>
@@ -183,20 +185,23 @@
           <a href="<?php echo site_url(); ?>Admin/reqAll">
             <i class="fa fa-reply-all"></i> <span>Permintaan Pelatihan</span></i>
             <span class="pull-right-container">
-              <span class="label bg-orange pull-right">?</span>
+              <span class="label bg-orange pull-right"><?php echo $request; ?></span>
             </span>
           </a>
         </li>  
         <li class="treeview">
           <a href="<?php echo site_url(); ?>Admin/reqAll">
             <i class="fa fa-photo"></i> <span>Galeri</span></i>
+            <span class="pull-right-container">
+              <span class="label bg-orange pull-right"><?php echo $galeri; ?></span>
+            </span>
           </a>
         </li>                
         <li class="treeview">
           <a href="<?php echo site_url(); ?>Admin/kontakAll">
             <i class="fa fa-envelope"></i> <span>Pesan</span></i>
             <span class="pull-right-container">
-              <span class="label label-danger pull-right">?</span>
+              <span class="label label-danger pull-right"><?php echo $pesan; ?></span>
             </span>
           </a>
         </li>        

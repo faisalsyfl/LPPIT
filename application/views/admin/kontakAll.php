@@ -36,7 +36,7 @@
                 <?php 
                 $i=1;foreach($all as $row){
                  ?>
-                <tr>
+                <tr class="<?php if($row['stats'] == 1) echo "success"; else echo "danger";?>">
                     <td><?php echo $i++; ?></td>
                     <td><?php echo $row['nama']; ?></td>
                     <td><?php echo $row['instansi']; ?></td>

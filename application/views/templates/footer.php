@@ -18,9 +18,10 @@
                 <div class="col-md-3 col-sm-6 col-xs-12 fbox">
                     <h4>PROGRAM PELATIHAN</h4>
                     <ul class="big">
-                    <?php foreach($allp as $row){ ?>
-                        <li><a href="#" title="">Pelatihan <?php echo $row['nama']; ?></a></li>
-                    <?php } ?>
+                        <li>Teknologi</li>
+                        <li>Pendidikan</li>
+                        <li>Keuangan</li>
+                        <li>Sastra</li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 fbox">

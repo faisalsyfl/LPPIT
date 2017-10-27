@@ -63,7 +63,6 @@
     <script src="<?php echo base_url(); ?>assets/js/Image-popup/script.js"></script>
 
     <script type="text/javascript">
-    <script type="text/javascript">
         $('.carousel[data-typeImage-popup/').each(function(){
           var next = $(this).next();
           if (!next.length) {

@@ -104,20 +104,20 @@
                         </ul>
                     </div>
                     
-                    <!-- <div class="col-sm-12 home_bottom">
-                        <h2 class="sub_title">Mitra Pelatihan</h2>
+                    <div class="col-sm-12 home_bottom">
+                        <h2 class="sub_title">Mitra</h2>
                         <div class="clearfix"></div>
                         <div class="row">
                             <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="6000" id="myCarousel">
                                 <div class="carousel-inner">
                                     <div class="item active">
                                         <div class="col-md-2 col-sm-6 col-xs-12 p10">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l1.jpg" class="img-responsive" style="height:100px;" alt="Reference"></a>
+                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l1.jpg" class="img-responsive" alt="Reference"></a>
                                         </div>
                                     </div>
                                     <div class="item">
                                         <div class="col-md-2 col-sm-6 col-xs-12 p10">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l2.jpg" class="img-responsive" style="height:100px;" alt="Reference"></a>
+                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l2.jpg" class="img-responsive" alt="Reference"></a>
                                         </div>
                                     </div>
                                     <div class="item">
@@ -195,7 +195,7 @@
                                 <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
                             </div>
                         </div>                            
-                    </div> -->
+                    </div>
                     
                 </div>
             </div>

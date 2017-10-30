@@ -10,9 +10,9 @@ class Galeri extends CI_Controller {
 
 	}
     public function index()	{
-		// var_dump($data['all']);
+		$data['all'] = $this->ModelGaleri->selectJoin("tb_pelatihan","tb_galeri.idp","tb_pelatihan.id")->result_array(); 
 		$this->load->view('templates/header',$this->data);
-		$this->load->view('galeri');
+		$this->load->view('galeri',$data);
 		$this->load->view('templates/footer');
 	}
 			

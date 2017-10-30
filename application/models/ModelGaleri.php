@@ -40,16 +40,12 @@ class ModelGaleri extends CI_Model {
 	public function SelectJoin($table2,$cond1,$cond2,$id=NULL){
 		$this->db->select('*');
 		$this->db->from($this->tableName);
-		$this->db->join($table2,$cond);
-	}
-	public function selectJoinCategory($cat = NULL){
-		$this->db->select('*');
-		$this->db->from($this->tableName);
-		$this->db->join('tb_category','account_category_id = category_id');
-		if($cat != NULL){
-			$this->db->where('account_category_id',$cat);
+		$this->db->join($table2,$cond1." = ".$cond2);
+		if($id != NULL){
+			$this->db->where($cond1,$id);
 		}
-		$this->db->order_by('account_id','DESC');
+		$this->db->order_by($cond1,'ASC');
+
 		return $this->db->get();
 	}
 

@@ -25,7 +25,7 @@
                   <select class="form-control select2" name="kategori" style="width: 100%;" required="">
                     <option selected="selected" disabled="disabled">- Pilih Pelatihan -</option>
                     <?php foreach($training as $row){ ?>
-                    <option value="<?php echo$row['nama']; ?>"><?php echo $row['nama']; ?></option>
+                    <option value="<?php echo $row['id']; ?>"><?php echo $row['nama']; ?></option>
                     <?php } ?>
                   </select>
                 </div>                   

@@ -132,4 +132,36 @@ class Admin extends CI_Controller {
 		}
 		redirect('Admin/reqAll');
 	}	
+	public function addGaleri(){
+		$data['training'] = $this->ModelPelatihan->selectAll()->result_array();
+		$this->load->view('admin/templates/header',$this->head);
+		$this->load->view('admin/galeriPost',$data);
+		$this->load->view('admin/templates/footer');		
+	}
+	public function uploadGaleri(){
+		var_dump($this->input->post());
+		$config['upload_path']		= './uploads/peserta/';
+		$config['allowed_types']	= '*';
+		$config['max_size']			= 0;				
+		date_default_timezone_set("Asia/Bangkok");
+		$config['file_name']		= "Photo_".time();
+		$this->load->library('upload', $config);
+		var_dump($_FILES);
+		$count = count($_FILES['foto']['name']);
+		for($i=0;$i<$count;$i++){
+			if($this->upload->do_upload('foto')){
+				var_dump($this->upload->data());
+			}
+		}
+		// if(!$this->upload->do_upload("foto")){
+		// 	//gagal
+		// 	$error = array('error' => $this->upload->display_errors());
+		// 	var_dump($error);
+		// } else{
+		// 	$test = $this->input->post("foto");
+		// 	foreach($test as $r){
+		// 		var_dump($r);
+		// 	}
+		// }
+	}
 }

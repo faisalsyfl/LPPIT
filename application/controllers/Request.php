@@ -46,6 +46,7 @@ class Request extends CI_Controller {
 			/*
 				** SEND MAIL **
 			*/
+			
 			$config = Array(
 				'protocol' =>  'smtp',
 				'smtp_host' => 'ssl://smtp.googlemail.com',

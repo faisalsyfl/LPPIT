@@ -23,7 +23,7 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="top">
+        <div class="top container-fluid">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6">
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default custom-nav" data-spy="affix" data-offset-top="20" style="z-index: 99; top:0;">
 			<div class="container">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse">
 					<span class="sr-only">Toggle Navigation</span>

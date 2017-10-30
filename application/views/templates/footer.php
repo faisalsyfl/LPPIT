@@ -63,6 +63,7 @@
     <script src="<?php echo base_url(); ?>assets/js/Image-popup/script.js"></script>
     
     <script type="text/javascript">
+        //Carousel
         $('#myCarousel').carousel({
             interval: 4000
         })
@@ -82,7 +83,7 @@
         
             next.children(':first-child').clone().appendTo($(this));
             }
-        });   
+        }); 
     </script>
 </body>
 </html>

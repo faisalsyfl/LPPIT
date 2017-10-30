@@ -426,3 +426,13 @@ blockquote cite:before {
   .carousel-inner .prev        { left: -25%; }
   .carousel-control            { width:  4%; }
   .carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+
+  .affix {
+    top: 0 !important;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }

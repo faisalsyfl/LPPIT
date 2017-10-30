@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css'); ?>">
-<br>
-<br>
 <section class="contact" id="contact">
     <div class="container">
     <div class="bread_area">

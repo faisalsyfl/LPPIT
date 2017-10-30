@@ -25,13 +25,17 @@
                   <input type="text" class="form-control" name="nama" placeholder="Judul Pelatihan" required="">
                 </div>
                 <div class="form-group">
-                  <select class="form-control select2" name="kategori" style="width: 100%;" required="">
+                  <select id="category" class="form-control select2" name="kategori" onchange="handleSelect()" style="width: 100%;" required="">
                     <option selected="selected" disabled="disabled">- Kategori -</option>
                     <option>Keuangan</option>
                     <option>Teknologi Informasi</option>
                     <option>Pendidikan</option>
                     <option>Sastra</option>
+                    <option>Lainnya...</option>
                   </select>
+                </div>
+                <div class="form-group">
+                  <input id="lainnya_text" type="text" class="form-control" name="kategori_lainnya" placeholder="Tulis lainnya" disabled/>
                 </div>
                 <!-- Date range -->
                 <div class="form-group">
@@ -70,4 +74,12 @@
     <!-- /.content -->
   </div>
 
-
+  <script>
+	function handleSelect() {
+		 if (document.getElementById("category").selectedIndex == "5") {
+			 document.getElementById('lainnya_text').disabled = false;
+		 } else {
+			 document.getElementById('lainnya_text').disabled = true;
+		 }
+	 }
+</script>

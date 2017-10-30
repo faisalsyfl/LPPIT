@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-default custom-nav" data-spy="affix" data-offset-top="20" style="z-index: 99; top:0;">
+        <nav class="navbar navbar-default" data-spy="affix" data-offset-top="20" style="z-index: 99; top:0;">
 			<div class="container">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse">
 					<span class="sr-only">Toggle Navigation</span>

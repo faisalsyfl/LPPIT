@@ -67,6 +67,7 @@
                         <li class="dropdown">
                             <a href="#" title="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PELATIHAN <span class="caret"></span></a>
                             <ul class="dropdown-menu">
+                            <li><a href="<?php echo site_url(); ?>Request" title="">Permintaan Pelatihan</a></li>
                             <?php foreach($allp as $row){ ?>
                                 <li><a href="<?php echo site_url(); ?>Pelatihan/view/<?php echo $row['id']; ?>" title="">Pelatihan <?php echo $row['nama']; ?></a></li>
                             <?php } ?>

@@ -61,24 +61,28 @@
     <script src="<?php echo base_url(); ?>assets/js/Image-popup/jquery.imagesloaded.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/Image-popup/jquery.isotope.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/Image-popup/script.js"></script>
-
+    
     <script type="text/javascript">
-        // $('.carousel[data-typeImage-popup/').each(function(){
-        //   var next = $(this).next();
-        //   if (!next.length) {
-        //     next = $(this).siblings(':first');
-        //   }
-        //   next.children(':first-child').clone().appendTo($(this));
-
-        //   for (var i=0;i<4;i++) {
-        //     next=next.next();
-        //     if (!next.length) {
-        //         next = $(this).siblings(':first');
-        //     }
-
-        //     next.children(':first-child').clone().appendTo($(this));
-        //   }
-        // });        
+        $('#myCarousel').carousel({
+            interval: 4000
+        })
+        
+        $('.carousel .item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+            
+            for (var i=0;i<2;i++) {
+                next=next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+        
+            next.children(':first-child').clone().appendTo($(this));
+            }
+        });   
     </script>
 </body>
 </html>

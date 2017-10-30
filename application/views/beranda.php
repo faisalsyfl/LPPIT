@@ -66,7 +66,7 @@
                                     <img src="<?php echo base_url(); ?>assets/img/berita/1.jpg" alt="Post">
                                     <div class="caption">
                                         <h3><a href="#">MENINGKATKAN KOMPETENSI MELALUI PENDIDIKAN UNTUK MELAWAN MASALAH SOSIAL</a></h3>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                        <p style="text-align: justify;">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
                                         <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
                                     </div>
                                 </div>                                        
@@ -76,7 +76,7 @@
                                     <img src="<?php echo base_url(); ?>assets/img/berita/2.jpg" class="img-responsive" alt="Post">
                                     <div class="caption">
                                         <h3><a href="#">UPI – BANK BJB TANDATANGANI NOTA KESEPAHAMAN</a></h3>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                        <p style="text-align: justify;">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
                                         <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
                                     </div>
                                 </div>                                        
@@ -86,7 +86,7 @@
                                     <img src="<?php echo base_url(); ?>assets/img/berita/3.jpg" class="img-responsive" alt="Post">
                                     <div class="caption">
                                         <h3><a href="#">PAHAMI SECARA KOMPREHENSIF PEREMPUAN DAN ANAK</a></h3>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                        <p style="text-align: justify;">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
                                         <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
                                     </div>
                                 </div>                                        
@@ -96,7 +96,7 @@
                                     <img src="<?php echo base_url(); ?>assets/img/berita/4.jpg" class="img-responsive" alt="Post">
                                     <div class="caption">
                                         <h3><a href="#">PROF. DR. UYU WAHYUDIN, M.PD., GURU BESAR ILMU PENDIDIKAN LUAR SEKOLAH</a></h3>
-                                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+                                        <p style="text-align: justify;">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
                                         <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
                                     </div>
                                 </div>                                        
@@ -105,100 +105,60 @@
                     </div>
                     
                     <div class="col-sm-12 home_bottom">
-                        <h2 class="sub_title">Mitra</h2>
+                        <h2 class="sub_title">MITRA</h2>
                         <div class="clearfix"></div>
                         <div class="row">
                             <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="6000" id="myCarousel">
-                                <div class="carousel-inner">
+                                <center><div class="carousel-inner">
                                     <div class="item active">
-                                        <div class="col-md-2 col-sm-6 col-xs-12 p10">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l1.jpg" class="img-responsive" alt="Reference"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12 p10">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l2.jpg" class="img-responsive" alt="Reference"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
+                                        <div class="col-md-3 col-sm-6 col-xs-12">
                                             <a href="#"><img src="<?php echo base_url(); ?>assets/img/l3.jpg" class="img-responsive" alt="Reference"></a>
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
+                                        <div class="col-md-3 col-sm-6 col-xs-12">
                                             <a href="#"><img src="<?php echo base_url(); ?>assets/img/l4.jpg" class="img-responsive" alt="Reference"></a>
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
+                                        <div class="col-md-3 col-sm-6 col-xs-12">
                                             <a href="#"><img src="<?php echo base_url(); ?>assets/img/l5.jpg" class="img-responsive" alt="Reference"></a>
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
+                                        <div class="col-md-3 col-sm-6 col-xs-12">
                                             <a href="#"><img src="<?php echo base_url(); ?>assets/img/l6.jpg" class="img-responsive" alt="Reference"></a>
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
+                                        <div class="col-md-3 col-sm-6 col-xs-12">
                                             <a href="#"><img src="<?php echo base_url(); ?>assets/img/l7.jpg" class="img-responsive" alt="Reference"></a>
                                         </div>
                                     </div>
                                     <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
+                                        <div class="col-md-3 col-sm-6 col-xs-12">
                                             <a href="#"><img src="<?php echo base_url(); ?>assets/img/l8.jpg" class="img-responsive" alt="Reference"></a>
                                         </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12 p10">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l1.jpg" class="img-responsive" alt="Reference"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12 p10">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l2.jpg" class="img-responsive" alt="Reference"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l3.jpg" class="img-responsive" alt="Reference"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l4.jpg" class="img-responsive" alt="Reference"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l5.jpg" class="img-responsive" alt="Reference"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l6.jpg" class="img-responsive" alt="Reference"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l7.jpg" class="img-responsive" alt="Reference"></a>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-md-2 col-sm-6 col-xs-12">
-                                            <a href="#"><img src="<?php echo base_url(); ?>assets/img/l8.jpg" class="img-responsive" alt="Reference"></a>
-                                        </div>
-                                    </div>                                        
-                                </div>
+                                    </div>                       
+                                </div></center>
                                 <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
                                 <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
                             </div>
                         </div>                            
                     </div>
-                    
+                    <!-- Map -->
+                    <div class="col-sm-12" style="margin-top: 40px;">
+                        <h2 class="sub_title">PETA LOKASI</h2>
+                        <div class="clearfix"></div>
+                            <center>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.6246623948055!2d107.59123405804505!3d-6.860693898760517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6b95dfec46d%3A0x297b3091bb6d289c!2sGedung+university+center+UPI!5e0!3m2!1sen!2sid!4v1509343693634" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <center>
+                        </div>                            
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
+    
 </main>

@@ -23,7 +23,7 @@
             <?php echo form_open('Home/kontakProses'); ?>
                 <div class="row">
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 slideanim">
-                        <input type="text" class="form-control first-name" name="nama" placeholder="Nama Depan" required/>
+                        <input type="text" class="form-control first-name" name="nama" placeholder="Nama Lengkap" required/>
                     </div>
                     <div class="form-group col-lg-6 col-md-6 col-sm-6 slideanim">
                         <input type="text" class="form-control last-name" name="instansi" placeholder="Institusi" required/>

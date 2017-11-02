@@ -15,22 +15,13 @@
 <main class="site-main page-main">
     <div class="container">
         <div class="row">
-            <section class="page col-sm-9">
-                <h2 class="page-title"><?php echo "Pelatihan ".$training['nama']; ?></h2>
+            <section class="page col-md-12">
+                <h2 class="page-title"><?php echo $news['judul']; ?></h2>
+                <img src="<?php echo site_url(); ?>uploads/berita/<?php echo $news['path']; ?>" alt="" style="height: auto;width: 500px;">
                 <div class="entry text-justify">
-                    <?php echo $training['keterangan']; ?>                        
+                    <?php echo $news['teks']; ?>                        
                 </div>
             </section>
-            <aside class="sidebar col-sm-3">
-                <div class="widget">
-                    <h4>Info Pelatihan</h4>
-                    <ul>
-                        <li>Kategori&emsp;: <?php echo $training['kategori']; ?></li>
-                        <li>Tempat&emsp;: <?php echo $training['tempat']; ?></li>
-                        <li>Pemateri&emsp;: <?php echo $training['pemateri']; ?></li>
-                    </ul>
-                </div>
-            </aside>
         </div>
     </div>
 </main>

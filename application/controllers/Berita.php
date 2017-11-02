@@ -14,8 +14,13 @@ class Berita extends CI_Controller {
 		$this->load->view('templates/footer',$data);
 	}
 	public function view($id){
+		$data['all'] = $this->ModelNews->selectAll(3)->result_array();
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();			
 		$data['news'] = $this->ModelNews->selectById($id)->row_array();
-		
+		// var_dump($data);
+		$this->load->view('templates/header',$data);
+		$this->load->view('viewBerita',$data);
+		$this->load->view('templates/footer',$data);		
 	}
 	
 	function tanggal_indo($tanggal, $cetak_hari = false){

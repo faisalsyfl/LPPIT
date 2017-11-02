@@ -195,7 +195,7 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo site_url(); ?>Admin/newsAll"><i class="fa fa-th"></i> Semua Foto<span class="pull-right-container">
+            <li><a href="<?php echo site_url(); ?>Admin/galeriAll"><i class="fa fa-th"></i> Semua Foto<span class="pull-right-container">
               <span class="label label-warning pull-right"><?php echo $galeri; ?></span>
             </span></a></li>
             <li><a href="<?php echo site_url(); ?>Admin/addGaleri"><i class="fa fa-edit"></i> Buat Galeri</a></li>

@@ -150,9 +150,9 @@ class Admin extends CI_Controller {
 	}	
 
 	public function galeriAll(){
-		$data['training'] = $this->ModelPelatihan->selectAll()->result_array();
+		$data['all'] = $this->ModelGaleri->selectJoin("tb_pelatihan","tb_galeri.idp","tb_pelatihan.id")->result_array();
 		$this->load->view('admin/templates/header',$this->head);
-		$this->load->view('admin/galeriPost',$data);
+		$this->load->view('admin/galeriAll',$data);
 		$this->load->view('admin/templates/footer');	
 	}
 	public function addGaleri(){
@@ -199,7 +199,8 @@ class Admin extends CI_Controller {
             $success[] = $this->upload->data();
             $insert['idp'] = $form['kategori'];
             $insert['filename'] = $config['file_name'].$this->upload->data('file_ext');
-            $this->ModelGaleri->insert($insert);
+			$this->ModelGaleri->insert($insert);
+			redirect('Admin/addGaleri');
          }
          $i++;
       }

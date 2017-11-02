@@ -39,9 +39,10 @@
 					<div class="form-group col-lg-6 col-md-6 col-sm-6 slideanim">
 						<select id="category" class="form-control first-name" name="kategori" onchange="handleSelect()" required>
 							<option selected="selected" style="color: #9e9e9e;" disabled>- Kategori -</option>
-							<option value="Pendidikan">Pendidikan</option>
-							<option value="Teknologi">Teknologi</option>
 							<option value="Keuangan">Keuangan</option>
+							<option value="Teknologi">Teknologi Informasi</option>
+							<option value="Pendidikan">Pendidikan</option>
+							<option value="Pendidikan">Sastra</option>
 							<option value="Lainnya">Lainnya...</option>
 						</select>
                     </div>
@@ -80,7 +81,7 @@
 
 <script>
 	function handleSelect() {
-		 if (document.getElementById("category").selectedIndex == "4") {
+		 if (document.getElementById("category").selectedIndex == "5") {
 			 document.getElementById('lainnya_text').disabled = false;
 		 } else {
 			 document.getElementById('lainnya_text').disabled = true;

@@ -203,7 +203,7 @@ class Admin extends CI_Controller {
          }
          $i++;
       }
-		redirect('Admin/addGaleri');
+		redirect('Admin/galeriAll');
 		
 	}
 }

@@ -199,11 +199,11 @@ class Admin extends CI_Controller {
             $success[] = $this->upload->data();
             $insert['idp'] = $form['kategori'];
             $insert['filename'] = $config['file_name'].$this->upload->data('file_ext');
-			$this->ModelGaleri->insert($insert);
-			redirect('Admin/addGaleri');
+				$this->ModelGaleri->insert($insert);
          }
          $i++;
       }
+		redirect('Admin/addGaleri');
 		
 	}
 }

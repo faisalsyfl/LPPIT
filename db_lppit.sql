@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 17 Okt 2017 pada 19.14
+-- Generation Time: 02 Nov 2017 pada 05.38
 -- Versi Server: 10.1.9-MariaDB
 -- PHP Version: 7.0.1
 
@@ -46,7 +46,7 @@ CREATE TABLE `tb_berita` (
 CREATE TABLE `tb_galeri` (
   `id` int(11) NOT NULL,
   `idp` int(11) NOT NULL,
-  `path` varchar(255) NOT NULL,
+  `filename` varchar(255) NOT NULL,
   `tag` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -92,6 +92,13 @@ CREATE TABLE `tb_pelatihan` (
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `tb_pelatihan`
+--
+
+INSERT INTO `tb_pelatihan` (`id`, `nama`, `kategori`, `tempat`, `pemateri`, `start`, `end`, `path`, `stats`, `keterangan`) VALUES
+(1, 'Seminar Literasi Keuangan', 'Sastra', 'Kantor Balai Kota, Bandung', 'Dede Azis S.Pd', '2017-10-19', '2017-10-21', '', 1, '<p>Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.Seminar ini menitik beratkan.</p>');
+
 -- --------------------------------------------------------
 
 --
@@ -109,13 +116,6 @@ CREATE TABLE `tb_request` (
   `file` varchar(255) NOT NULL,
   `stats` int(2) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `tb_request`
---
-
-INSERT INTO `tb_request` (`id`, `nama`, `instansi`, `email`, `telepon`, `kategori`, `keterangan`, `file`, `stats`) VALUES
-(1, 'Faisal S A', 'SMA Negeri 11 Bandung', 'faisalsyfl@gmail.com', '085793434357', 'Teknologi', 'Pelatihan Web bagi siswa siswi, 40 orang', 'Excel_1508258471.xls', 0);
 
 --
 -- Indexes for dumped tables
@@ -159,7 +159,7 @@ ALTER TABLE `tb_request`
 -- AUTO_INCREMENT for table `tb_berita`
 --
 ALTER TABLE `tb_berita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tb_galeri`
 --
@@ -174,12 +174,12 @@ ALTER TABLE `tb_kontak`
 -- AUTO_INCREMENT for table `tb_pelatihan`
 --
 ALTER TABLE `tb_pelatihan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tb_request`
 --
 ALTER TABLE `tb_request`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

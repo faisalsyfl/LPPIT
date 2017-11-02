@@ -200,15 +200,7 @@
             </span></a></li>
             <li><a href="<?php echo site_url(); ?>Admin/addGaleri"><i class="fa fa-edit"></i> Buat Galeri</a></li>
           </ul>
-        </li>         
-        <li class="treeview">
-          <a href="<?php echo site_url(); ?>Admin/reqAll">
-            <i class="fa fa-photo"></i> <span>Galeri</span></i>
-            <span class="pull-right-container">
-              <span class="label bg-orange pull-right"><?php echo $galeri; ?></span>
-            </span>
-          </a>
-        </li>                
+        </li>                    
         <li class="treeview">
           <a href="<?php echo site_url(); ?>Admin/kontakAll">
             <i class="fa fa-envelope"></i> <span>Pesan</span></i>

@@ -96,12 +96,28 @@ class Admin extends CI_Controller {
 	public function addNews(){
 		// var_dump($this->input->post());
 		$data = $this->input->post();
+		// print_r(nl2br($data['teks']))
 		$data['tanggal'] = date('Y-m-d');
 		unset($data['_wysihtml5_mode']);
 		$data['stats'] = 1;
-		var_dump($data);
-		$this->ModelNews->insert($data);
-		redirect('Admin/trainingAll');
+		// var_dump($data);
+
+		$config['upload_path']		= './uploads/berita/';
+		$config['allowed_types']	= '*';
+		$config['max_size']			= 0;				
+		date_default_timezone_set("Asia/Bangkok");
+		$config['file_name']		= "Berita_".time();
+		$this->load->library('upload', $config);
+		var_dump($_FILES);
+		if(!$this->upload->do_upload('photo')){
+			//gagal
+			$error = array('error' => $this->upload->display_errors());
+			// var_dump($error);
+		} else{
+			$data['path'] = $config['file_name'].$this->upload->data('file_ext');
+			$this->ModelNews->insert($data);
+			redirect('Admin/newsAll');
+		}
 	}
 	public function kontakAll()	{
 		$data['all'] = $this->ModelPesan->selectAll()->result_array();
@@ -150,9 +166,8 @@ class Admin extends CI_Controller {
 		$config['upload_path']		= './uploads/peserta/';
 		$config['allowed_types']	= '*';
 		$config['max_size']			= 0;				
+			$this->load->library('upload');
 		date_default_timezone_set("Asia/Bangkok");
-		$config['file_name']		= "Photo_".time();
-		$this->load->library('upload', $config);
 		// var_dump($_FILES);
 		foreach($_FILES['foto'] as $key=>$val)
       {
@@ -169,7 +184,11 @@ class Admin extends CI_Controller {
       // variabel error diubah, dari string menjadi array
       $error = array();
       $success = array();
+      $i = 0;
+      $t = (int) time();
       foreach($_FILES as $field_name => $file){
+      	$config['file_name']		= "Photo_".($t + $i );
+      	$this->upload->initialize($config);
          if ( ! $this->upload->do_upload($field_name)){
             $error[] = $this->upload->display_errors();
 	      	echo "<pre>";
@@ -181,8 +200,8 @@ class Admin extends CI_Controller {
             $insert['idp'] = $form['kategori'];
             $insert['filename'] = $config['file_name'].$this->upload->data('file_ext');
             $this->ModelGaleri->insert($insert);
-
          }
+         $i++;
       }
 		
 	}

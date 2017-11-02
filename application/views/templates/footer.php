@@ -83,7 +83,11 @@
         
             next.children(':first-child').clone().appendTo($(this));
             }
-        }); 
+        });
+        $('.zoom').click(function(){
+            $('#navQ').removeClass("affix");
+            console.log("TRI ANJING");
+        });
     </script>
 </body>
 </html>

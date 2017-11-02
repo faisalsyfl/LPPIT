@@ -15,7 +15,7 @@
 <main class="site-main page-main">
     <div class="container">
         <div class="row">
-            <section class="page col-md-12">
+            <section class="page col-md-9">
                 <h2 class="page-title"><?php echo $news['judul']; ?></h2>
                 <img src="<?php echo site_url(); ?>uploads/berita/<?php echo $news['path']; ?>" alt="" style="height: auto;width: 500px;">
                 <div class="entry text-justify">

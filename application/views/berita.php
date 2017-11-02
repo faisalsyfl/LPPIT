@@ -24,34 +24,19 @@
                             </div>
                             <div class="media-body">
                                 <h3 class="media-heading"><a href="<?php echo base_url(); ?>Berita/view/<?php echo $row['id']; ?>" title="<?php echo $row['judul']; ?>"><?php echo $row['judul']; ?></a></h3>
+                                <p>Oleh: <span style="color: #005FA6"><?php echo $row['penulis']; ?></span> | Tanggal: <span style="color: #005FA6"><?php echo $row['tanggal']; ?></span>| Kategori: <span style="color: #005FA6"><?php echo $row['kategori']; ?></span> 
+                                        </p>
                                 <p class="" style="text-align:justify;"><?php echo mb_strimwidth($row['teks'], 0, 350, "...");  ?></p>
                                 <aside class="meta category-meta">
-
                                     <div class="pull-right">
-                                        <ul class="arc-share">
-                                            <li><a href="#" title="Post"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#" title="Post"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#" title="Post"><i class="fa fa-linkedin"></i></a></li>
-                                            <li><a href="#" title="Post"><i class="fa fa-google-plus"></i></a></li>
-                                        </ul>
+                                        
                                     </div>
                                 </aside>                                
                             </div>
                         </li>
-                    <?php } ?>                       
+                    <?php } ?>             
                     </ul>                    
                 </section>
-                <aside class="sidebar col-sm-3">
-                    <div class="widget">
-                        <h4>SERVICES</h4>
-                        <ul>
-                            <li class="current"><a href="#" title="">Service Title One</a></li>
-                            <li><a href="#" title="">Service Title Two</a></li>
-                            <li><a href="#" title="">Service Title Three</a></li>
-                            <li><a href="#" title="">Service Title Four</a></li>
-                        </ul>
-                    </div>
-                </aside>
             </div>
         </div>
     </main>

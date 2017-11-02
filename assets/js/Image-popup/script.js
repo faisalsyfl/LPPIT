@@ -98,43 +98,43 @@ $(document).ready(function($) {
 	/*-------------------------------------------------*/
 	/* =  fullwidth carousell
 	/*-------------------------------------------------*/
-	// try {
-	// 	var owl = $("#owl-demo").owlCarousel({
-	// 		autoPlay: 10000,
-	// 		items : 3,
-	// 		itemsDesktop : [1199,2],
-	// 		itemsDesktopSmall : [979,2]
-	// 	});
+	try {
+		var owl = $("#owl-demo").owlCarousel({
+			autoPlay: 10000,
+			items : 3,
+			itemsDesktop : [1199,2],
+			itemsDesktopSmall : [979,2]
+		});
 
-	// 	// Custom Navigation Events
-	// 	$(".arrow-box .next").click(function(event){
-	// 		event.preventDefault();
-	// 		owl.trigger('owl.next');
-	// 	});
-	// 	$(".arrow-box .prev").click(function(event){
-	// 		event.preventDefault();
-	// 		owl.trigger('owl.prev');
-	// 	});
+		// Custom Navigation Events
+		$(".arrow-box .next").click(function(event){
+			event.preventDefault();
+			owl.trigger('owl.next');
+		});
+		$(".arrow-box .prev").click(function(event){
+			event.preventDefault();
+			owl.trigger('owl.prev');
+		});
 
-	// 	var owl2 = $("#owl-demo2").owlCarousel({
-	// 		autoPlay: 10000,
-	// 		items : 5,
-	// 		itemsDesktop : [1199,4],
-	// 		itemsDesktopSmall : [979,3]
-	// 	});
+		var owl2 = $("#owl-demo2").owlCarousel({
+			autoPlay: 10000,
+			items : 5,
+			itemsDesktop : [1199,4],
+			itemsDesktopSmall : [979,3]
+		});
 
-	// 	// Custom Navigation Events
-	// 	$(".arrow-box2 .next").click(function(event){
-	// 		event.preventDefault();
-	// 		owl2.trigger('owl.next');
-	// 	});
-	// 	$(".arrow-box2 .prev").click(function(event){
-	// 		event.preventDefault();
-	// 		owl2.trigger('owl.prev');
-	// 	});
-	// } catch(err) {
+		// Custom Navigation Events
+		$(".arrow-box2 .next").click(function(event){
+			event.preventDefault();
+			owl2.trigger('owl.next');
+		});
+		$(".arrow-box2 .prev").click(function(event){
+			event.preventDefault();
+			owl2.trigger('owl.prev');
+		});
+	} catch(err) {
 
-	// }
+	}
 	/*-------------------------------------------------*/
 	/* =  Search animation
 	/*-------------------------------------------------*/

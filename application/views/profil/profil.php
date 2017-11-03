@@ -54,7 +54,7 @@
                         <li class="current"><a href="<?php echo base_url(); ?>Profil/" title="">Tentang Kami</a></li>
                         <li><a href="<?php echo base_url(); ?>Profil/visimisi" title="">Visi dan Misi</a></li>
                         <li><a href="<?php echo base_url(); ?>Profil/struktur" title="">Struktur Organisasi</a></li>
-                        <li><a href="<?php echo base_url(); ?>Profil/pimpinan" title="">Pimpinan</a></li>
+                        <!-- <li><a href="<?php echo base_url(); ?>Profil/pimpinan" title="">Pimpinan</a></li> -->
                     </ul>
                 </div>
             </aside>

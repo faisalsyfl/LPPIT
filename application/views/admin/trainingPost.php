@@ -11,6 +11,7 @@
         <li class="active">Buat Pelatihan</li>
       </ol>
     </section>
+    
     <!-- Main content -->
     <section class="content">
       <!-- Main row -->

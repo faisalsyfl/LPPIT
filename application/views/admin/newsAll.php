@@ -13,6 +13,11 @@
     </section>
   <!-- Main content -->
     <section class="content">
+      <?php if ($this->uri->segment(3) == "Success"){ ?>
+      <div class="alert alert-success" role="alert">
+        Berita berhasil diposting, silahkan cek pada daftar pelatihan dibawah ini.
+      </div>
+      <?php } ?>
       <div class="row">
         <div class="col-xs-12">
         <div class="box">

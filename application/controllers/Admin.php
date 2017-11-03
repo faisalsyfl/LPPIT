@@ -48,7 +48,7 @@ class Admin extends CI_Controller {
 		}
 	}
 
-	public function trainingAll()	{
+	public function trainingAll($status = NULL)	{
 		$data['all'] = $this->ModelPelatihan->selectAll()->result_array();
 		$this->load->view('admin/templates/header',$this->head);
 		$this->load->view('admin/trainingAll',$data);
@@ -71,7 +71,7 @@ class Admin extends CI_Controller {
 		$data['stats'] = 1;
 		var_dump($data);
 		$this->ModelPelatihan->insert($data);
-		redirect('Admin/trainingAll');
+		redirect('Admin/trainingAll/Success');
 	}
 	public function disableTraining(){
 		if($this->ModelPelatihan->selectById($id)->row()->stats == 0){
@@ -82,7 +82,7 @@ class Admin extends CI_Controller {
 		redirect('Admin/trainingAll');		
 	}
 
-	public function newsAll()	{
+	public function newsAll($status = NULL)	{
 		$data['all'] = $this->ModelNews->selectAll()->result_array();		
 		$this->load->view('admin/templates/header',$this->head);
 		$this->load->view('admin/newsAll',$data);
@@ -116,7 +116,7 @@ class Admin extends CI_Controller {
 		} else{
 			$data['path'] = $config['file_name'].$this->upload->data('file_ext');
 			$this->ModelNews->insert($data);
-			redirect('Admin/newsAll');
+			redirect('Admin/newsAll/Success');
 		}
 	}
 	public function kontakAll()	{
@@ -149,7 +149,7 @@ class Admin extends CI_Controller {
 		redirect('Admin/reqAll');
 	}	
 
-	public function galeriAll(){
+	public function galeriAll($status = NULL){
 		$data['all'] = $this->ModelGaleri->selectJoin("tb_pelatihan","tb_galeri.idp","tb_pelatihan.id")->result_array();
 		$this->load->view('admin/templates/header',$this->head);
 		$this->load->view('admin/galeriAll',$data);
@@ -203,7 +203,6 @@ class Admin extends CI_Controller {
          }
          $i++;
       }
-		redirect('Admin/galeriAll');
-		
+		redirect('Admin/galeriAll/Success');
 	}
 }

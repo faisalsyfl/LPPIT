@@ -48,6 +48,7 @@ class Pelatihan extends CI_Controller {
 		$data['training'] = $this->ModelPelatihan->selectById($id)->row_array();
 		$data['training']['start'] = $this->tanggal_indo($data['training']['start'],true);
 		$data['training']['end'] = $this->tanggal_indo($data['training']['end'],true);
+		$data['foto'] = $this->ModelGaleri->selectJoin("tb_pelatihan","tb_galeri.idp","tb_pelatihan.id",$id,4)->result_array(); 
 		$this->load->view('templates/header',$data);
 		$this->load->view('pelatihan',$data);
 		$this->load->view('templates/footer',$data);

@@ -43,7 +43,11 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Silahkan masuk menggunakan username dan password anda</p>
-
+      <?php if ($this->uri->segment(3) == "failed"){ ?>
+      <div class="alert alert-danger" role="alert">
+        Maaf username/password yang anda masukkan salah.
+      </div>
+      <?php } ?>
     <form action="<?php echo site_url(); ?>Admin/auth" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Username" name="uname">

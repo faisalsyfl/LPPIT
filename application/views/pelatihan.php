@@ -59,26 +59,13 @@
             <div class="col-lg-8 col-md-8 contact-wthree2">
                 <h2 class="category-title">Foto Kegiatan Pelatihan</h2>
                 <div class="row">
+                    <?php foreach($foto as $row){ ?>
                     <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                         <div class="text-center">
-                            <a href="<?php echo base_url(); ?>assets/img/h1.jpeg" class="zoom"><img src="<?php echo base_url(); ?>assets/img/h1.jpeg" class="img-responsive rounded" alt="..."></a>
+                            <a href="<?php echo base_url(); ?>assets/peserta/<?php echo $row['filename']; ?>" class="zoom"><img src="<?php echo base_url(); ?>uploads/peserta/<?php echo $row['filename']; ?>" class="img-responsive rounded" alt="..."></a>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
-                        <div class="text-center">
-                            <a href="<?php echo base_url(); ?>assets/img/h2.jpg" class="zoom"><img src="<?php echo base_url(); ?>assets/img/h2.jpg" class="img-responsive rounded" alt="..."></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
-                        <div class="text-center">
-                            <a href="<?php echo base_url(); ?>assets/img/h3.jpeg" class="zoom"><img src="<?php echo base_url(); ?>assets/img/h3.jpeg" class="img-responsive rounded" alt="..."></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
-                        <div class="text-center">
-                            <a href="<?php echo base_url(); ?>assets/img/h4.jpeg" class="zoom"><img src="<?php echo base_url(); ?>assets/img/h4.jpeg" class="img-responsive rounded" alt="..."></a>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>

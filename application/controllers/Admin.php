@@ -28,26 +28,43 @@ class Admin extends CI_Controller {
 		$this->head['request'] = $this->ModelRequest->selectAll()->num_rows();
 	}
 	public function index()	{
-		$count['pelatihan'] = $this->ModelPelatihan->selectAll()->num_rows();
-		$count['galeri'] = $this->ModelGaleri->selectAll()->num_rows();
-		$count['berita'] = $this->ModelNews->selectAll()->num_rows();
-		$count['pesan'] = $this->ModelPesan->selectAll()->num_rows();
-		$this->load->view('admin/templates/header',$this->head);
-		$this->load->view('admin/index',$count);
-		$this->load->view('admin/templates/footer');
+		if(is_logged_in()){
+			$count['pelatihan'] = $this->ModelPelatihan->selectAll()->num_rows();
+			$count['galeri'] = $this->ModelGaleri->selectAll()->num_rows();
+			$count['berita'] = $this->ModelNews->selectAll()->num_rows();
+			$count['pesan'] = $this->ModelPesan->selectAll()->num_rows();
+			$this->load->view('admin/templates/header',$this->head);
+			$this->load->view('admin/index',$count);
+			$this->load->view('admin/templates/footer');
+		}else{
+			redirect('Admin/login/failed');				
+		}
+
 	}
 	public function login()	{
 		$this->load->view('admin/login');
 	}
 	public function auth(){
 		$post = $this->input->post();
-		if($post['uname'] == 'admin' && $post['pass'] == 'admin'){
-			redirect('Admin/');			
+		$data = $this->ModelAkun->check($post['uname'],$post['pass'])->row_array();
+		if(!isset($data)){
+			redirect('Admin/login/failed');			
 		}else{
-			redirect('Admin/login');			
+			$userdata = array(
+				'username'  => $data['uname'],
+				'fullname'  => $data['pass'],
+				'log'  => $data['ll'],
+				'logged_in' => TRUE
+			);
+			$this->session->set_userdata($userdata);
+			redirect('Admin/');			
 		}
 	}
 
+	public function logOut(){
+		$this->session->sess_destroy();
+		redirect('');
+	}
 	public function trainingAll($status = NULL)	{
 		$data['all'] = $this->ModelPelatihan->selectAll()->result_array();
 		$this->load->view('admin/templates/header',$this->head);

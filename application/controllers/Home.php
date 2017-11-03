@@ -20,7 +20,8 @@ class Home extends CI_Controller {
 	 */
 
 	public function index()	{
-		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();		
+		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();	
+		$data['berita'] = $this->ModelNews->selectAll(4)->result_array();
 		$this->load->view('templates/header',$data);
 		$this->load->view('beranda',$data);
 		$this->load->view('templates/footer',$data);

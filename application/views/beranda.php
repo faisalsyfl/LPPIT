@@ -61,46 +61,19 @@
                     <div class="col-sm-12"><h2 class="sub_title">BERITA TERBARU</h2></div>
                     <div class="home_list">
                         <ul>
+                            <?php foreach($berita as $i){ ?>
                             <li class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="thumbnail">
-                                    <img src="<?php echo base_url(); ?>assets/img/berita/1.jpg" alt="Post">
+                                    <img src="<?php echo base_url(); ?>uploads/berita/<?php echo $i['path']; ?>" alt="Post">
                                     <div class="caption">
-                                        <h3><a href="#">MENINGKATKAN KOMPETENSI MELALUI PENDIDIKAN UNTUK MELAWAN MASALAH SOSIAL</a></h3>
-                                        <p style="text-align: justify;">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                        <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
+                                        <h3><a href="<?php echo base_url(); ?>Berita/view/<?php echo $i['id']; ?>" style="text-transform: uppercase; "><?php echo $i['judul']; ?></a></h3>
+                                        <p style="text-align: justify;"><?php echo mb_strimwidth($i['teks'], 0, 150, "...") ?></p>
+                                        <a href="<?php echo base_url(); ?>Berita/view/<?php echo $i['id']; ?>" class="btn btn-link" role="button">Selengkapnya</a>
                                     </div>
                                 </div>                                        
                             </li>
-                            <li class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="thumbnail">
-                                    <img src="<?php echo base_url(); ?>assets/img/berita/2.jpg" class="img-responsive" alt="Post">
-                                    <div class="caption">
-                                        <h3><a href="#">UPI – BANK BJB TANDATANGANI NOTA KESEPAHAMAN</a></h3>
-                                        <p style="text-align: justify;">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                        <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
-                                    </div>
-                                </div>                                        
-                            </li>
-                            <li class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="thumbnail">
-                                    <img src="<?php echo base_url(); ?>assets/img/berita/3.jpg" class="img-responsive" alt="Post">
-                                    <div class="caption">
-                                        <h3><a href="#">PAHAMI SECARA KOMPREHENSIF PEREMPUAN DAN ANAK</a></h3>
-                                        <p style="text-align: justify;">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                        <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
-                                    </div>
-                                </div>                                        
-                            </li>
-                            <li class="col-md-3 col-sm-6 col-xs-12">
-                                <div class="thumbnail">
-                                    <img src="<?php echo base_url(); ?>assets/img/berita/4.jpg" class="img-responsive" alt="Post">
-                                    <div class="caption">
-                                        <h3><a href="#">PROF. DR. UYU WAHYUDIN, M.PD., GURU BESAR ILMU PENDIDIKAN LUAR SEKOLAH</a></h3>
-                                        <p style="text-align: justify;">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                                        <a href="#" class="btn btn-link" role="button">Selengkapnya</a>
-                                    </div>
-                                </div>                                        
-                            </li>                                    
+                            <?php } ?>
+                                                              
                         </ul>
                     </div>
                     

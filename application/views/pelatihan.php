@@ -62,7 +62,7 @@
                     <?php foreach($foto as $row){ ?>
                     <div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
                         <div class="text-center">
-                            <a href="<?php echo base_url(); ?>assets/peserta/<?php echo $row['filename']; ?>" class="zoom"><img src="<?php echo base_url(); ?>uploads/peserta/<?php echo $row['filename']; ?>" class="img-responsive rounded" alt="..."></a>
+                            <a href="<?php echo base_url(); ?>uploads/peserta/<?php echo $row['filename']; ?>" class="zoom"><img src="<?php echo base_url(); ?>uploads/peserta/<?php echo $row['filename']; ?>" class="img-responsive rounded" alt="..."></a>
                         </div>
                     </div>
                     <?php } ?>

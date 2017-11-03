@@ -14,6 +14,7 @@ class ModelAkun extends CI_Model {
 		$this->db->select('*');
 		$this->db->from($this->tableName);
 		$this->db->limit($from,$offset);
+		$this->db->order_by('id','DESC');
 
 		return $this->db->get();
 	}

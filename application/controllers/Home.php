@@ -37,4 +37,7 @@ class Home extends CI_Controller {
 		$this->ModelPesan->insert($insert);
 		redirect('Kontak/1');
 	}
+	public function error403($suc=0){
+		$this->load->view('error/html/error_403');
+	}
 }

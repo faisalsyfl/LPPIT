@@ -9,15 +9,15 @@
                         <b>Lembaga Pelatihan, Penerapan Ilmu dan Teknologi.</b><br>
                         Universitas Pendidikan Indonesia.
                     </p>
-                    <ul class="list-inline">
+                    <!-- <ul class="list-inline">
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-linkedin"></i></a></li>                        
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 fbox">
                     <h4>PROGRAM PELATIHAN</h4>
-                    <ul class="big">
+                    <ul class="big" style="color: #666">
                         <li>Teknologi</li>
                         <li>Pendidikan</li>
                         <li>Keuangan</li>
@@ -27,10 +27,10 @@
                 <div class="col-md-3 col-sm-6 col-xs-12 fbox">
                     <h4>PROFIL</h4>
                     <ul class="big">
-                        <li><a href="#" title="">Tentang Kami</a></li>
-                        <li><a href="#" title="">Visi dan Misi</a></li>
-                        <li><a href="#" title="">Pimpinan</a></li>
-                        <li><a href="#" title="">Struktur Organisasi</a></li>
+                        <li><a href="<?php echo base_url(); ?>Profil" title="">Tentang Kami</a></li>
+                        <li><a href="<?php echo base_url(); ?>Profil/visimisi" title="">Visi dan Misi</a></li>
+                        <li><a href="<?php echo base_url(); ?>Profil/struktur" title="">Struktur Organisasi</a></li>
+                        <!-- <li><a href="#" title="">Pimpinan</a></li> -->
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 fbox">
@@ -48,7 +48,7 @@
                         <p class="pull-left">Copyright &copy; 2017 LP2IT | Universitas Pendidikan Indonesia</p>
                     </div>
                     <div class="col-md-8">
-                        <p class="list-inline navbar-right">Dikembangkan Oleh: Faisal S.A. & Tri S.</p>
+                        <p class="list-inline navbar-right">Dikembangkan Oleh: <a href="http://www.linkedin.com/in/faisalsyfl" target="_blank">Faisal S.A.</a> & <a href="http://www.linkedin.com/in/trisamsul" target="_blank">Tri S.</a></p>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,6 @@
         });
         $('.zoom').click(function(){
             $('#navQ').removeClass("affix");
-            console.log("TRI ANJING");
         });
     </script>
 </body>

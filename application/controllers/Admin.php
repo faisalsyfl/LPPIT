@@ -46,13 +46,13 @@ class Admin extends CI_Controller {
 	}
 	public function auth(){
 		$post = $this->input->post();
-		$data = $this->ModelAkun->check($post['uname'],$post['pass'])->row_array();
+		$data = $this->ModelAkun->check($post['uname'],md5($post['pass']))->row_array();
 		if(!isset($data)){
 			redirect('Admin/login/failed');			
 		}else{
 			$userdata = array(
-				'username'  => $data['uname'],
-				'fullname'  => $data['pass'],
+				'username'  => $data['username'],
+				'fullname'  => $data['password'],
 				'log'  => $data['ll'],
 				'logged_in' => TRUE
 			);
@@ -60,11 +60,27 @@ class Admin extends CI_Controller {
 			redirect('Admin/');			
 		}
 	}
-
 	public function logOut(){
 		$this->session->sess_destroy();
 		redirect('');
 	}
+
+	public function changePass(){
+
+		$this->load->view('admin/templates/header',$this->head);
+		$this->load->view('admin/ganti');
+		$this->load->view('admin/templates/footer');		
+	}
+
+	public function updatePass(){
+		$form = $this->input->post();
+		$data = $this->ModelAkun->check($this->session->userdata('username'),md5($form['old']))->row_array();
+		// var_dump);
+		$update['password'] = md5($form['new']);
+		$this->ModelAkun->update($data['id'],$update);
+		redirect('Admin/');
+	}
+
 	public function trainingAll($status = NULL)	{
 		$data['all'] = $this->ModelPelatihan->selectAll()->result_array();
 		$this->load->view('admin/templates/header',$this->head);

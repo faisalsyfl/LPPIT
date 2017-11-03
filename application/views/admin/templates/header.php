@@ -77,7 +77,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat"><i class="fa fa-user"></i> Profil</a>
+                  <a href="<?php echo base_url('Admin/changePass'); ?>" class="btn btn-default btn-flat"><i class="fa fa-user"></i> Ganti Password</a>
                 </div>
                 <div class="pull-right">
                   <a href="<?php echo base_url(); ?>Admin/logOut/" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Keluar</a>

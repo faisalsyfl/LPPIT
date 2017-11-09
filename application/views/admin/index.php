@@ -42,7 +42,7 @@
             <div class="icon">
               <i class="fa fa-picture-o"></i>
             </div>
-            <a href="<?php echo site_url();?>Admin/newsall" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo site_url();?>Admin/galeriall" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

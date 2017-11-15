@@ -18,7 +18,15 @@ class ModelPelatihan extends CI_Model {
 
 		return $this->db->get();
 	}
+	public function selectAllEx($from=0,$offset=0){
+		$this->db->select('*');
+		$this->db->from($this->tableName);
+		$this->db->order_by('id','DESC');
+		$this->db->limit($from,$offset);
+		$this->db->where("stats","1");
 
+		return $this->db->get();		
+	}
 	public function selectById($id){
 		$this->db->select('*');
 		$this->db->from($this->tableName);
@@ -35,6 +43,10 @@ class ModelPelatihan extends CI_Model {
 		$this->db->set($data);
 		$this->db->where('id',$id);
 		return $this->db->update($this->tableName);
+	}
+	public function delete($id){
+		$this->db->where('id',$id);
+		$this->db->delete($this->tableName);
 	}
 
 }

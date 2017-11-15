@@ -26,7 +26,7 @@
 			?>
 				<div class="col-md-3 col-sm-6" style="margin-bottom: 20px;">
 					<div class="text-center">
-						<a href="<?php echo base_url(); ?>uploads/peserta/<?php echo $foto['filename']; ?>" class="zoom"><img class="img-responsive" src="<?php echo base_url(); ?>uploads/peserta/<?php echo $foto['filename']; ?>" class="img-responsive rounded" alt="..."></a>
+						<a href="<?php echo base_url(); ?>uploads/galeri/<?php echo $foto['filename']; ?>" class="zoom"><img class="img-responsive" src="<?php echo base_url(); ?>uploads/galeri/<?php echo $foto['filename']; ?>" class="img-responsive rounded" alt="..."></a>
 					</div>
 				</div>
 			<?php 

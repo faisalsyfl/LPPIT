@@ -6,7 +6,7 @@ class Galeri extends CI_Controller {
 	private $data;
 	public function __construct(){
 		parent::__construct();
-		$this->data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();		
+		$this->data['allp'] = $this->ModelPelatihan->selectAllEx(6)->result_array();		
 
 	}
     public function index()	{

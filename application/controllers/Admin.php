@@ -92,6 +92,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/trainingPost');
 		$this->load->view('admin/templates/footer');
 	}
+
 	public function addTraining(){
 		// var_dump($this->input->post());
 		$data = $this->input->post();
@@ -106,13 +107,38 @@ class Admin extends CI_Controller {
 		$this->ModelPelatihan->insert($data);
 		redirect('Admin/trainingAll/Success');
 	}
-	public function disableTraining(){
+	public function disableTraining($id){
 		if($this->ModelPelatihan->selectById($id)->row()->stats == 0){
 			$this->ModelPelatihan->update($id,['stats' => 1]);
 		}else{
 			$this->ModelPelatihan->update($id,['stats' => 0]);
 		}
-		redirect('Admin/trainingAll');		
+		redirect('Admin/trainingAll/Disable');		
+	}
+	public function editTraining($id = NULL){
+		if($id != NULL){
+			$data['obj'] = $this->ModelPelatihan->selectById($id)->row_array();
+			// var_dump($data['obj']);
+			$this->load->view('admin/templates/header',$this->head);
+			$this->load->view('admin/trainingEdit',$data);
+			$this->load->view('admin/templates/footer');			
+		}else{
+			$data = $this->input->post();
+			$data['start'] = explode(" - ",$data['times'])[0];
+			$data['start'] = date("Y-m-d", strtotime($data['start']));
+			$data['end'] = explode(" - ",$data['times'])[1];
+			$data['end'] = date("Y-m-d", strtotime($data['end']));
+			unset($data['times']);
+			unset($data['_wysihtml5_mode']);
+			$id = $data['id'];
+			unset($data['id']);
+			$this->ModelPelatihan->update($id,$data);
+			redirect('Admin/trainingAll/Edit');
+		}
+	}
+	public function deleteTraining($id){
+		$this->ModelPelatihan->delete($id);
+		redirect('Admin/trainingAll/Delete');
 	}
 
 	public function newsAll($status = NULL)	{
@@ -136,7 +162,7 @@ class Admin extends CI_Controller {
 		// var_dump($data);
 
 		$config['upload_path']		= './uploads/berita/';
-		$config['allowed_types']	= '*';
+		$config['allowed_types']	= 'jpg|png|gif';
 		$config['max_size']			= 0;				
 		date_default_timezone_set("Asia/Bangkok");
 		$config['file_name']		= "Berita_".time();
@@ -151,6 +177,46 @@ class Admin extends CI_Controller {
 			$this->ModelNews->insert($data);
 			redirect('Admin/newsAll/Success');
 		}
+	}
+	public function editNews($id = NULL){
+		if($id != NULL){
+			$data['obj'] = $this->ModelNews->selectById($id)->row_array();
+			// var_dump($data['obj']);
+			$this->load->view('admin/templates/header',$this->head);
+			$this->load->view('admin/NewsEdit',$data);
+			$this->load->view('admin/templates/footer');			
+		}else{
+			$data = $this->input->post();
+			var_dump($data);
+			$id = $data['id'];
+			unset($data['id']);
+			unset($data['_wysihtml5_mode']);
+			
+			$config['upload_path']		= './uploads/berita/';
+			$config['allowed_types']	= 'jpg|png|gif';
+			$config['max_size']			= 0;				
+			date_default_timezone_set("Asia/Bangkok");
+			$config['file_name']		= "Berita_".time();
+			$this->load->library('upload', $config);
+			// var_dump($_FILES);
+			if(!$this->upload->do_upload('photo')){
+				//gagal
+				$error = array('error' => $this->upload->display_errors());
+				// var_dump($error);
+			} else{
+				$data['path'] = $config['file_name'].$this->upload->data('file_ext');
+				$this->ModelNews->update($id,$data);
+				// redirect('Admin/newsAll/Edit');
+			}
+			$this->ModelNews->update($id,$data);
+			redirect('Admin/newsAll/Edit');
+	
+			// redirect('Admin/NewsAll/Edit');
+		}
+	}
+	public function deleteNews($id){
+		$this->ModelNews->delete($id);
+		redirect('Admin/NewsAll/Delete');
 	}
 	public function kontakAll()	{
 		$data['all'] = $this->ModelPesan->selectAll()->result_array();
@@ -184,6 +250,7 @@ class Admin extends CI_Controller {
 
 	public function galeriAll($status = NULL){
 		$data['all'] = $this->ModelGaleri->selectJoin("tb_pelatihan","tb_galeri.idp","tb_pelatihan.id")->result_array();
+		// var_dump($data);
 		$this->load->view('admin/templates/header',$this->head);
 		$this->load->view('admin/galeriAll',$data);
 		$this->load->view('admin/templates/footer');	
@@ -196,8 +263,8 @@ class Admin extends CI_Controller {
 	}
 	public function uploadGaleri(){
 		$form = $this->input->post();
-		$config['upload_path']		= './uploads/peserta/';
-		$config['allowed_types']	= '*';
+		$config['upload_path']		= './uploads/galeri/';
+		$config['allowed_types']	= 'jpg|png|gif';
 		$config['max_size']			= 0;				
 			$this->load->library('upload');
 		date_default_timezone_set("Asia/Bangkok");
@@ -237,5 +304,10 @@ class Admin extends CI_Controller {
          $i++;
       }
 		redirect('Admin/galeriAll/Success');
+	}
+	public function deleteGaleri($id){
+		$this->ModelGaleri->delete($id);
+		redirect('Admin/galeriAll/Delete');
+
 	}
 }

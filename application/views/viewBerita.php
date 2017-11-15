@@ -20,7 +20,7 @@
                 <p>Oleh: <span style="color: #005FA6"><?php echo $news['penulis']; ?></span> | Tanggal: <span style="color: #005FA6"><?php echo $news['tanggal']; ?></span>| Kategori: <span style="color: #005FA6"><?php echo $news['kategori']; ?></span></p>
                 <br/>
                 <br/>
-                <center><img src="<?php echo site_url(); ?>uploads/berita/<?php echo $news['path']; ?>" alt="" style="height: auto;width: 300px;"></center>
+                <center><img src="<?php echo site_url(); ?>uploads/berita/<?php echo $news['path']; ?>" alt="" style="height: auto;width: 450px;"></center>
                 <div class="entry text-justify">
                     <br/>
                     <?php echo $news['teks']; ?>                      

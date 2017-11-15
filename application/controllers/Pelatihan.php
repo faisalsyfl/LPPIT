@@ -44,7 +44,7 @@ class Pelatihan extends CI_Controller {
 	}	
 	/*View every training by ID*/
 	public function view($id){
-		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();
+		$data['allp'] = $this->ModelPelatihan->selectAllEx(6)->result_array();
 		$data['training'] = $this->ModelPelatihan->selectById($id)->row_array();
 		$data['training']['start'] = $this->tanggal_indo($data['training']['start'],true);
 		$data['training']['end'] = $this->tanggal_indo($data['training']['end'],true);

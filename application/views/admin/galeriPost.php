@@ -22,7 +22,7 @@
             <div class="box-body">
               <?php echo form_open_multipart('Admin/uploadGaleri'); ?>
                 <div class="form-group">
-                  <select class="form-control select2" name="kategori" style="width: 100%;" required="">
+                  <select class="form-control select2" name="kategori" style="width: 100%;" required>
                     <option selected="selected" disabled="disabled">- Pilih Pelatihan -</option>
                     <?php foreach($training as $row){ ?>
                     <option value="<?php echo $row['id']; ?>"><?php echo $row['nama']; ?></option>
@@ -33,7 +33,7 @@
                 <!-- /.form group -->
                 <div class="form-group">
                   Masukkan foto-foto pelatihan tersebut (Anda dapat memilih banyak foto) : 
-                  <input type="file" name="foto[]" multiple >
+                  <input type="file" name="foto[]" multiple required="" >
                 </div>
             </div>
             <div class="box-footer clearfix">

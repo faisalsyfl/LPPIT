@@ -17,6 +17,10 @@
       <div class="alert alert-success" role="alert">
         Foto berhasil diposting, silahkan cek pada daftar pelatihan dibawah ini.
       </div>
+      <?php }else if($this->uri->segment(3) == "Delete"){ ?>
+      <div class="alert alert-success" role="alert">
+        Foto berhasil di hapus.
+      </div>
       <?php } ?>
       <div class="row">
         <div class="col-xs-12">
@@ -43,8 +47,8 @@
                     <td><?php echo $row['filename']; ?></td>
                     <td><?php echo $row['nama']; ?></td>
                     <td>
-                      <button type="button" class="btn btn-sm bg-navy"><i class="fa fa-eye"></i></button>
-                      <button type="button" class="btn btn-sm bg-red"><i class="fa fa-times"></i></button>
+                      <button type="button" title="Lihat Berita" class="btn btn-sm bg-blue" onclick="window.open('<?php echo site_url();?>uploads/galeri/<?php echo $row['filename']; ?>')"><i class="fa fa-eye"></i></button>
+                      <button type="button" class="btn btn-sm bg-red" onclick="location.href='<?php echo site_url();?>Admin/deleteGaleri/<?php echo $row['id'] ?>'"><i class="fa fa-times"></i></button>
                     </td>
                 </tr>
                 <?php } ?>

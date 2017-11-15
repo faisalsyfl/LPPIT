@@ -38,7 +38,7 @@ class ModelGaleri extends CI_Model {
 	}
 
 	public function SelectJoin($table2,$cond1,$cond2,$id=NULL,$from=NULL){
-		$this->db->select('*');
+		$this->db->select('tb_galeri.id,tb_galeri.idp,tb_pelatihan.nama,tb_galeri.filename');
 		$this->db->from($this->tableName);
 		$this->db->join($table2,$cond1." = ".$cond2);
 		if($id != NULL){
@@ -48,6 +48,10 @@ class ModelGaleri extends CI_Model {
 		$this->db->order_by($cond1,'DESC');
 
 		return $this->db->get();
+	}
+	public function delete($id){
+		$this->db->where('id',$id);
+		$this->db->delete($this->tableName);
 	}
 
 }

@@ -6,7 +6,7 @@ class Request extends CI_Controller {
 
 	public function index($stats=0)	{
 		$data['all'] = $this->ModelNews->selectAll(3)->result_array();
-		$data['allp'] = $this->ModelPelatihan->selectAll(6)->result_array();		
+		$data['allp'] = $this->ModelPelatihan->selectAllEx(6)->result_array();		
 
 		// var_dump($data['all']);
 		$this->load->view('templates/header',$data);
